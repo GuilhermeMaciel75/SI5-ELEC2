@@ -16,23 +16,24 @@
     },
     "lightgbm": {
         "model_name": "lightgbm",
-        "search_execution_time": 116.59900522232056,
-        "fit_execution_time": 116.49698996543884,
-        "memory_max": 19.08984375,
-        "memory_avg": 2.760074976569822,
+        "search_execution_time": 43.17018365859985,
+        "fit_execution_time": 43.17018365859985,
+        "memory_max": 9.9140625,
+        "memory_avg": -1.3481570512820513,
         "best_params": {
-            "subsample": 0.8,
-            "reg_lambda": 0.1,
-            "reg_alpha": 0.1,
-            "num_leaves": 50,
+            "subsample": 0.6,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0,
+            "num_leaves": 40,
             "n_estimators": 250,
-            "min_child_samples": 10,
-            "max_depth": 15,
+            "min_child_samples": 20,
+            "max_depth": 20,
             "learning_rate": 0.1,
-            "colsample_bytree": 0.8
+            "colsample_bytree": 0.9
         },
         "model": "./models/lightgbm.pkl",
-        "result": "./data/results/lightgbm.csv"
+        "result": "./data/results/lightgbm.csv",
+        "iter": null
     },
     "knn": {
         "model_name": "knn",
