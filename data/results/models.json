@@ -33,5 +33,20 @@
         },
         "model": "./models/lightgbm.pkl",
         "result": "./data/results/lightgbm.csv"
+    },
+    "knn": {
+        "model_name": "knn",
+        "search_execution_time": 11.8947012424469,
+        "fit_execution_time": 11.8947012424469,
+        "memory_max": 4.33203125,
+        "memory_avg": 2.0954483695652173,
+        "best_params": {
+            "weights": "distance",
+            "n_neighbors": 7,
+            "metric": "manhattan"
+        },
+        "model": "./models/knn.pkl",
+        "result": "./data/results/knn.csv",
+        "iter": null
     }
 }
