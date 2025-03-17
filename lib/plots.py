@@ -8,7 +8,7 @@ def show_metrics(df_results, metrics=["F1_Score", "Recall", "AUC", "Accuracy"], 
     if ax is None:
         fig, ax = plt.subplots(figsize=(10, 6))
 
-    df_results = df_results.sort_values(by="K_")
+    df_results = df_results.sort_values(by="K")
 
     colors = {
         "F1_Score": ("darkblue", "lightblue"),
@@ -19,8 +19,8 @@ def show_metrics(df_results, metrics=["F1_Score", "Recall", "AUC", "Accuracy"], 
 
     for metric in metrics:
         train_color, test_color = colors.get(metric, ("black", "gray"))
-        ax.plot(df_results["K_"], df_results[f"{metric}_train"], marker="o", linestyle="-", color=train_color, label=f"{metric} (train)")
-        ax.plot(df_results["K_"], df_results[f"{metric}_test"], marker="s", linestyle="--", color=test_color, label=f"{metric} (test)")
+        ax.plot(df_results["K"], df_results[f"{metric}_train"], marker="o", linestyle="-", color=train_color, label=f"{metric} (train)")
+        ax.plot(df_results["K"], df_results[f"{metric}_test"], marker="s", linestyle="--", color=test_color, label=f"{metric} (test)")
 
     ax.set_xlabel("K-fold")
     ax.set_ylabel("Valor da Métrica")

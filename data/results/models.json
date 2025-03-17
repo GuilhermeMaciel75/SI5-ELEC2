@@ -1,0 +1,36 @@
+{
+    "decision_tree": {
+        "model_name": "decision_tree",
+        "search_execution_time": 8.384971380233765,
+        "fit_execution_time": 8.283347606658936,
+        "memory_max": 0.17578125,
+        "memory_avg": -2.9015625,
+        "best_params": {
+            "min_samples_split": 2,
+            "min_samples_leaf": 1,
+            "max_depth": 50
+        },
+        "model": "./models/decision_tree.pkl",
+        "result": "./data/results/decision_tree.csv"
+    },
+    "lightgbm": {
+        "model_name": "lightgbm",
+        "search_execution_time": 116.59900522232056,
+        "fit_execution_time": 116.49698996543884,
+        "memory_max": 19.08984375,
+        "memory_avg": 2.760074976569822,
+        "best_params": {
+            "subsample": 0.8,
+            "reg_lambda": 0.1,
+            "reg_alpha": 0.1,
+            "num_leaves": 50,
+            "n_estimators": 250,
+            "min_child_samples": 10,
+            "max_depth": 15,
+            "learning_rate": 0.1,
+            "colsample_bytree": 0.8
+        },
+        "model": "./models/lightgbm.pkl",
+        "result": "./data/results/lightgbm.csv"
+    }
+}
