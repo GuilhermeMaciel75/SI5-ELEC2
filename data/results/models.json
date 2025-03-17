@@ -1,17 +1,18 @@
 {
     "decision_tree": {
         "model_name": "decision_tree",
-        "search_execution_time": 8.384971380233765,
-        "fit_execution_time": 8.283347606658936,
-        "memory_max": 0.17578125,
-        "memory_avg": -2.9015625,
+        "search_execution_time": 11.30395245552063,
+        "fit_execution_time": 11.30395245552063,
+        "memory_max": 3.5546875,
+        "memory_avg": 2.3405157930107525,
         "best_params": {
-            "min_samples_split": 2,
-            "min_samples_leaf": 1,
+            "min_samples_split": 7,
+            "min_samples_leaf": 3,
             "max_depth": 50
         },
         "model": "./models/decision_tree.pkl",
-        "result": "./data/results/decision_tree.csv"
+        "result": "./data/results/decision_tree.csv",
+        "iter": null
     },
     "lightgbm": {
         "model_name": "lightgbm",
