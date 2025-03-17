@@ -26,9 +26,9 @@ def evaluate_model(model, X_train, Y_train, X_test, Y_test) -> pd.DataFrame:
     
     return df_results
 
-def search_params(model, params: dict, X_train, Y_train):
+def search_params(model, params: dict, X_train, Y_train, max_combinations=np.inf):
 
-    num_combinations = np.prod([len(v) for v in params.values()])
+    num_combinations = min(np.prod([len(v) for v in params.values()]), max_combinations)
     if num_combinations < 20:
         raise ValueError(f"O número de combinações ({num_combinations}) é menor que 20. Ajuste os hiperparâmetros.")
         
@@ -45,6 +45,7 @@ def search_params(model, params: dict, X_train, Y_train):
         n_jobs=-1,
     )
 
+    print(f"Num combinações de hiperparâmetros: {num_combinations}")
     print("Iniciando busca por hiperparâmetros...")
     init_time = time.time()
     search_model.fit(X_train, Y_train)

@@ -5,3 +5,7 @@ matplotlib
 scipy
 scikit-learn
 umap-learn
+lightgbm
+torch
+xgboost
+sklearn-lvq
