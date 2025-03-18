@@ -37,9 +37,12 @@ def load_model(model_name):
             return pickle.load(f)
     return None
     
-def save_results(df_results, model_name):
+def save_results(df_results, model_name, df_iter):
     results_path = f"./data/results/{model_name}.csv"
     df_results.to_csv(results_path, index=False)
+    if df_iter is not None:
+        iter_path = f"./data/results/{model_name}_iter.csv"
+        df_iter.to_csv(iter_path, index)
     return results_path
 
 def show_results(results:dict):

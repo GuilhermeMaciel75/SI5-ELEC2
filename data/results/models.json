@@ -1,36 +1,51 @@
 {
     "decision_tree": {
         "model_name": "decision_tree",
-        "search_execution_time": 8.384971380233765,
-        "fit_execution_time": 8.283347606658936,
-        "memory_max": 0.17578125,
-        "memory_avg": -2.9015625,
+        "search_execution_time": 2.3199961185455322,
+        "fit_execution_time": 2.3199961185455322,
         "best_params": {
             "min_samples_split": 2,
-            "min_samples_leaf": 1,
-            "max_depth": 50
+            "min_samples_leaf": 3,
+            "max_depth": 100
         },
         "model": "./models/decision_tree.pkl",
-        "result": "./data/results/decision_tree.csv"
+        "result": "./data/results/decision_tree.csv",
+        "iter": null
     },
     "lightgbm": {
         "model_name": "lightgbm",
-        "search_execution_time": 116.59900522232056,
-        "fit_execution_time": 116.49698996543884,
-        "memory_max": 19.08984375,
-        "memory_avg": 2.760074976569822,
+        "search_execution_time": 43.17018365859985,
+        "fit_execution_time": 43.17018365859985,
+        "memory_max": 9.9140625,
+        "memory_avg": -1.3481570512820513,
         "best_params": {
-            "subsample": 0.8,
-            "reg_lambda": 0.1,
-            "reg_alpha": 0.1,
-            "num_leaves": 50,
+            "subsample": 0.6,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0,
+            "num_leaves": 40,
             "n_estimators": 250,
-            "min_child_samples": 10,
-            "max_depth": 15,
+            "min_child_samples": 20,
+            "max_depth": 20,
             "learning_rate": 0.1,
-            "colsample_bytree": 0.8
+            "colsample_bytree": 0.9
         },
         "model": "./models/lightgbm.pkl",
-        "result": "./data/results/lightgbm.csv"
+        "result": "./data/results/lightgbm.csv",
+        "iter": null
+    },
+    "knn": {
+        "model_name": "knn",
+        "search_execution_time": 11.8947012424469,
+        "fit_execution_time": 11.8947012424469,
+        "memory_max": 4.33203125,
+        "memory_avg": 2.0954483695652173,
+        "best_params": {
+            "weights": "distance",
+            "n_neighbors": 7,
+            "metric": "manhattan"
+        },
+        "model": "./models/knn.pkl",
+        "result": "./data/results/knn.csv",
+        "iter": null
     }
 }

@@ -1,119 +1,189 @@
-import pandas as pd
+from sklearn.metrics import accuracy_score, f1_score, roc_curve, auc, recall_score
 import numpy as np
 import time
-from sklearn.metrics import f1_score, recall_score, roc_curve, auc, accuracy_score
-from sklearn.model_selection import RandomizedSearchCV, StratifiedKFold 
+import pandas as pd
+from sklearn.model_selection import RandomizedSearchCV, StratifiedKFold
 from tqdm.auto import tqdm
-from memory_profiler import memory_usage
-
 from lib.util import (
     RANDOM_STATE, RESULTS_PATH, RESULTS_DIR, 
     load_json, save_json, save_model, load_model, save_results
 )
 
-N_SPLITS = 5
+# Função para avaliar o modelo com base em várias métricas no conjunto de validação
+def evaluate_model_metrics(model, X_val, Y_val):
+    Y_pred = model.predict(X_val)
+    
+    fpr, tpr, _ = roc_curve(Y_val, Y_pred)
+    
+    metrics = {
+        'accuracy': accuracy_score(Y_val, Y_pred),
+        'f1_score': f1_score(Y_val, Y_pred),
+        'recall': recall_score(Y_val, Y_pred),
+        'auc': auc(fpr, tpr),
+        'fpr': list(fpr),
+        'tpr': list(tpr),
+    }
+    
+    return metrics
 
-def fit_model(model, X, y):
-    initial_memory = [memory_usage(-1, interval=0.1, max_usage=True)]
-    initial_time = time.time()
-    mem_usage, _ = memory_usage((model.fit, (X, y)), retval=True, interval=0.1)
-    final_time = time.time() - initial_time
-    mem_usage = [x - initial_memory[0] for x in mem_usage]  # Ajusta consumo de memória real
-    return max(mem_usage), sum(mem_usage) / max(len(mem_usage), 1), final_time
+# Função para selecionar o melhor modelo com base nas métricas
+def select_best_model(models_metrics):
+    best_score = -np.inf
+    best_model = None
+    best_params = None
+    best_param_time = None
 
-def evaluate_model(model, X_train, Y_train, X_test, Y_test, k) -> pd.DataFrame:
-    metrics = {"K": [k]}
-    for dataset, X, Y in [("train", X_train, Y_train), ("test", X_test, Y_test)]:
-        Y_pred = model.predict(X)
-        metrics[f"F1_Score_{dataset}"] = [f1_score(Y, Y_pred)]
-        metrics[f"Recall_{dataset}"] = [recall_score(Y, Y_pred)]
-        metrics[f"AUC_{dataset}"] = [auc(*roc_curve(Y, Y_pred)[:2])]
-        metrics[f"Accuracy_{dataset}"] = [accuracy_score(Y, Y_pred)]
-        if dataset == "test":
-            fpr, tpr, _ = roc_curve(Y, Y_pred)
-            metrics[f"FPR_{dataset}"] = [list(fpr)]
-            metrics[f"TPR_{dataset}"] = [list(tpr)]
-    return pd.DataFrame(metrics)
+    for param, value in models_metrics.items():
+        metrics = value['metrics']
+        
+        score = metrics['f1_score'] + metrics['accuracy'] - np.std(metrics['accuracy'])
+        
+        if score > best_score:
+            best_score = score
+            best_model = value['model']
+            best_params = metrics['param']
+            best_param_time = metrics['train_time']
+    
+    return best_model, best_score, best_param_time, best_params
 
-def new_search_params(model, params: dict, X_train, Y_train, model_name: str, max_combinations=np.inf, stop_iter: int = None, load_model: bool = True, save: bool = True):
+
+# Função principal que realiza a busca de parâmetros e validação
+def new_search_params(model, params, model_name,
+                      X_train, Y_train, X_val, Y_val, X_test, Y_test,
+                      std_w = 10, f1_w=1, acc_w=1,
+                      max_combinations=20, top_n=5,
+                      load_existing_model=True, save=True):
+    
     models_results = load_json(RESULTS_PATH)
-    if load_model and model_name in models_results:
-        print(f"Modelo {model_name} encontrado. Carregando...")
-        best_params = models_results[model_name]['best_params']
-        best_model = load_model(model_name)
-        
-        if best_model is None:
-            print(f"Modelo {model_name} não encontrado no disco. Treinando um novo modelo...")
-            best_model = model.set_params(**best_params)
-            best_model.fit(X_train, Y_train)
-            save_model(best_model, model_name)
-        
-        df_final = pd.read_csv(models_results[model_name]['result'])
-        df_iter = None
-        results = models_results[model_name]
-        return df_final, best_model, results, df_iter
-    
-    if (num_combinations := min(np.prod([len(v) for v in params.values()]), max_combinations)) < 20:
+
+    if load_existing_model and model_name in models_results:
+        return load_models_results(model_name)
+
+    num_combinations = min(np.prod([len(v) for v in params.values()]), max_combinations)
+    if num_combinations < 20:
         raise ValueError(f"O número de combinações ({num_combinations}) é menor que 20. Ajuste os hiperparâmetros.")
+
+    X_train, Y_train, X_val, Y_val, X_test, Y_test = map(np.array, [X_train, Y_train, X_val, Y_val, X_test, Y_test])
+
+    # Função de scoring personalizada
+    def custom_scoring(estimator, X, y):
+        """Função de scoring personalizada que combina acurácia, f1_score e o desvio padrão da acurácia."""
+
+        Y_pred = estimator.predict(X)
+
+        accuracy = accuracy_score(y, Y_pred)
+        f1 = f1_score(y, Y_pred)
+        acc_std = np.std(Y_pred)
+
+        score = (f1_w*f1 + accuracy*acc_w)/(f1_w + acc_w) - (acc_std*std_w)
+        return score
     
-    X_train = np.array(X_train)
-    Y_train = np.array(Y_train)
-    
-    print("Iniciando busca por hiperparâmetros...")
-    search_time_start = time.time()
+    search_model_initial_time = time.time()
+
+    # Realiza a busca com RandomizedSearchCV
     search_model = RandomizedSearchCV(
         estimator=model,
         param_distributions=params,
-        cv=3,
+        cv=5,
+        scoring=custom_scoring,  # Usando a função de scoring personalizada definida acima
         n_iter=num_combinations,
         random_state=RANDOM_STATE,
         n_jobs=-1,
+        return_train_score=True,  # Para retornar a avaliação feita em cada k-fold durante a CV
     )
     
-    max_mem, avg_mem, fit_time = fit_model(search_model, X_train, Y_train)
-    search_time_end = time.time() - search_time_start
+    search_model.fit(X_train, Y_train)
+    search_model_final_time = time.time() - search_model_initial_time
+
+    models_metrics = {}
+
+    # Obter o rank de todos os modelos e s eleciona os top_n modelos com base no rank_test_score
+    ranks = search_model.cv_results_['rank_test_score']
+    top_n_indices = np.argsort(ranks)[:top_n]
     
-    best_params = search_model.best_params_
-    best_model = model.set_params(**best_params)
+    # Avaliar os modelos com os melhores parâmetros
+    for idx in tqdm(top_n_indices, desc=f"Avaliando os top {top_n} modelos com a Validação"):
+        param = search_model.cv_results_["params"][idx]
+        model_val = model.set_params(**param)
+        init_time = time.time()
+        model_val.fit(X_train, Y_train)
+        load_time = time.time() - init_time
+
+        # Avalia o modelo no conjunto de validação
+        metrics = evaluate_model_metrics(model_val, X_val, Y_val)
+        metrics['train_time'] = load_time
+        metrics['param'] = param
+
+
+        models_metrics[str(param)] = {'model': model_val, 'metrics': metrics} 
+
+    # Selecionar o melhor modelo com base nas métricas
+    best_model, score, best_time, best_params = select_best_model(models_metrics)
+
+    # Avaliar o melhor modelo no conjunto de teste
+    test_metrics = evaluate_model_metrics(best_model, X_test, Y_test)
+
+    # Realizar a validação cruzada para o melhor modelo encontrado
+    kfold = StratifiedKFold(n_splits=5, random_state=RANDOM_STATE, shuffle=True)
+    cv_metrics = []
     
-    kfold = StratifiedKFold(n_splits=N_SPLITS, random_state=RANDOM_STATE, shuffle=True)
-    results_list = []
-    iter_list = []
-    
-    for k, (train_idx, test_idx) in tqdm(enumerate(kfold.split(X_train, Y_train), start=1), total=N_SPLITS, desc=f"Cross-Validation ({N_SPLITS}-folds)"):
-        X_train_fold, X_valid_fold = X_train[train_idx], X_train[test_idx]
-        Y_train_fold, Y_valid_fold = Y_train[train_idx], Y_train[test_idx]
+    for fold, (train_idx, val_idx) in enumerate(kfold.split(X_train, Y_train), 1):
+        X_train_fold, X_val_fold = X_train[train_idx], X_train[val_idx]
+        Y_train_fold, Y_val_fold = Y_train[train_idx], Y_train[val_idx]
         
+        # Treina o modelo
         best_model.fit(X_train_fold, Y_train_fold)
-        df_results = evaluate_model(best_model, X_train_fold, Y_train_fold, X_valid_fold, Y_valid_fold, k)
-        results_list.append(df_results)
         
-        if stop_iter:
-            iter_list.append(df_results.mean(numeric_only=True))
-            if len(iter_list) > stop_iter and iter_list[-1]['F1_Score_test'] < iter_list[-stop_iter]['F1_Score_test']:
-                print(f"Parando treinamento após {stop_iter} iterações devido à deterioração do desempenho.")
-                break
+        # Avalia o modelo no conjunto de validação do fold
+        fold_metrics = evaluate_model_metrics(best_model, X_val_fold, Y_val_fold)
+        fold_metrics['fold'] = fold
+        cv_metrics.append(fold_metrics)
     
-    df_final = pd.concat(results_list, ignore_index=True)
-    df_final = df_final.sort_values(by="F1_Score_test", ascending=False)
-    df_final = df_final[["K", "AUC_test", "AUC_train", "Accuracy_test", "Accuracy_train", "F1_Score_test", "F1_Score_train", "Recall_test", "Recall_train", "FPR_test", "TPR_test"]]
-    df_iter = pd.DataFrame(iter_list) if stop_iter else None
+    df_cvs = pd.DataFrame(cv_metrics)
     
+    # Criando o df ao longo de iterações para MLP e similiares
+    df_iter = pd.DataFrame({
+        'epoch': range(len(search_model.best_estimator_.loss_curve_)),
+        'loss': search_model.best_estimator_.loss_curve_,
+        'accuracy': search_model.best_estimator_.validation_scores_
+    }) if hasattr(search_model.best_estimator_, 'loss_curve_') else None
+    
+    # Calculando as métricas médias e desvio padrão durante o treinamento e validação
+    train_avg_accuracy = np.mean(search_model.cv_results_['mean_train_score'][search_model.cv_results_['param_' + list(best_params.keys())[0]] == best_params[list(best_params.keys())[0]]])
+    train_avg_accuracy_std = np.std(search_model.cv_results_['mean_train_score'][search_model.cv_results_['param_' + list(best_params.keys())[0]] == best_params[list(best_params.keys())[0]]])
+    train_avg_score = np.mean(search_model.cv_results_['mean_test_score'][search_model.cv_results_['param_' + list(best_params.keys())[0]] == best_params[list(best_params.keys())[0]]])
+    val_avg_accuracy = np.mean(df_cvs['accuracy'])
+    val_avg_f1_score = np.mean(df_cvs['f1_score'])
+    val_avg_recall = np.mean(df_cvs['recall'])
+
+    # Dicionário de resultados
+    results = {
+        "model_name": model_name,
+        "search_execution_time": search_model_final_time,
+        "best_model_train_time": best_time,
+        "best_params": best_params,
+        "best_score": score,
+        'train_avg_accuracy': train_avg_accuracy,
+        'train_avg_accuracy_std': train_avg_accuracy_std,
+        'train_avg_score': train_avg_score,
+        'val_avg_accuracy': val_avg_accuracy,
+        'val_avg_f1_score': val_avg_f1_score,
+        'val_avg_recall': val_avg_recall,
+        "test_accuracy": test_metrics['accuracy'],
+        "test_f1_score": test_metrics['f1_score'],
+        "test_recall": test_metrics['recall'],
+        "test_auc": test_metrics['auc'],
+        "fpr": test_metrics['fpr'],
+        "tpr": test_metrics['tpr'],
+        "model": f"./models/{model_name}.pkl",
+        "result": f"./data/results/{model_name}.csv",
+    }
+
+    # Salva os resultados
     if save:
-        model_path = save_model(best_model, model_name)
-        results_path = save_results(df_final, model_name)
-        
-        results = {
-            "model_name" : model_name,
-            "search_execution_time": search_time_end,
-            "fit_execution_time": fit_time,
-            "memory_max": max_mem,
-            "memory_avg": avg_mem,
-            "best_params": best_params,
-            "model": model_path,
-            "result": results_path
-        }
+        save_model(best_model, model_name)
+        save_results(df_cvs, model_name)
         models_results[model_name] = results
         save_json(models_results, RESULTS_PATH)
-    
-    return df_final, best_model, results, df_iter
+
+    return df_cvs, best_model, results, df_iter
