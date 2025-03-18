@@ -1,13 +1,11 @@
 {
     "decision_tree": {
         "model_name": "decision_tree",
-        "search_execution_time": 10.400574445724487,
-        "fit_execution_time": 10.400574445724487,
-        "memory_max": 0.02734375,
-        "memory_avg": -3.87890625,
+        "search_execution_time": 2.3199961185455322,
+        "fit_execution_time": 2.3199961185455322,
         "best_params": {
             "min_samples_split": 2,
-            "min_samples_leaf": 2,
+            "min_samples_leaf": 3,
             "max_depth": 100
         },
         "model": "./models/decision_tree.pkl",
