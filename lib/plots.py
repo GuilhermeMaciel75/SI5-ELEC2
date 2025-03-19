@@ -209,7 +209,7 @@ def show_bar_metrics2(df_results, ax=None):
 
     return fig
 
-def show_metrics_comparison_line_plot(df_results, ax=None):
+def show_metrics_comparison_line_plot(df_results, ax=None, y_min=0.8):
     # Definir as métricas a serem comparadas
     metrics = ["accuracy_train", "f1_score", "recall", "auc", "accuracy_train", "accuracy_val", "accuracy_test"]
     
@@ -229,7 +229,7 @@ def show_metrics_comparison_line_plot(df_results, ax=None):
         ax.plot(df_results.index, df_results[metric], label=metric, color=colors[i], linewidth=2)
     
     # Definir o limite do eixo y entre 0.8 * min(metrics) e 1.0
-    ymin = 0.8
+    ymin = y_min
     ymax = 1.0
     ax.set_ylim(ymin, ymax)
 

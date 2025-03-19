@@ -263,7 +263,7 @@ def search_params(model, params, model_name, dataset):
         
         
 
-def search_paramsv2(model, params, model_name, dataset, n_iter=20, score='auc'):
+def search_paramsv2(model, params, model_name, dataset, n_iter=20, score='auc', verbose=None):
     
     X_train, Y_train, X_val, Y_val, X_test, Y_test = map(np.array, dataset)
     
@@ -282,11 +282,12 @@ def search_paramsv2(model, params, model_name, dataset, n_iter=20, score='auc'):
             param_distributions=params,
             cv=5,
             scoring='roc_auc',
-            n_iter=20,
+            n_iter=n_iter,
             random_state=RANDOM_STATE + i,
             n_jobs=-1,
             refit=True,
-            return_train_score=True
+            return_train_score=True,
+            verbose=verbose
         )
         
         search_model.fit(X_train, Y_train)
