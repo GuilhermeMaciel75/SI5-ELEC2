@@ -263,7 +263,7 @@ def search_params(model, params, model_name, dataset):
         
         
 
-def search_paramsv2(model, params, model_name, dataset, n_iter=20, score='auc', verbose=None):
+def search_paramsv2(model, params, model_name, dataset, n_iter=20, score='auc', verbose=0):
     
     X_train, Y_train, X_val, Y_val, X_test, Y_test = map(np.array, dataset)
     
