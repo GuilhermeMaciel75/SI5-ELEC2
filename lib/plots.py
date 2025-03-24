@@ -273,3 +273,30 @@ def plot_cv_performance(cv_results, title):
     
     # Exibindo o gráfico
     plt.show()
+
+def plot_confusion_matrix(cm, title="Matriz de Confusão"):
+    cm = np.array(cm)  # Garante que a matriz esteja no formato correto
+
+    plt.figure(figsize=(5, 4))
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
+                xticklabels=[str(i) for i in range(len(cm))],
+                yticklabels=[str(i) for i in range(len(cm))])
+
+    plt.xlabel("Predito")
+    plt.ylabel("Real")
+    plt.title(title)
+    plt.tight_layout()
+    plt.show()
+
+
+
+def plot_roc_curve(fpr, tpr, auc_score, title="Curva ROC"):
+    plt.figure(figsize=(6, 5))
+    plt.plot(fpr, tpr, color='blue', lw=2, label=f'AUC = {auc_score:.4f}')
+    plt.plot([0, 1], [0, 1], linestyle='--', color='gray', label='Aleatório')
+    plt.xlabel("FPR (Taxa de Falsos Positivos)")
+    plt.ylabel("TPR (Taxa de Verdadeiros Positivos)")
+    plt.title(title)
+    plt.legend()
+    plt.show()
+

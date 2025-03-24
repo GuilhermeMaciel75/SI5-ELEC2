@@ -2,6 +2,9 @@ import os
 import json
 import pickle
 import numpy as np
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, confusion_matrix, roc_curve
+import pandas as pd
+
 
 RANDOM_STATE = 51
 RESULTS_PATH = "./data/results/models.json"
@@ -90,3 +93,66 @@ def generate_markdown_report(best_model, results_list):
         markdown += f"  - **Valor no Modelo Selecionado**: {model_value:.4f}\n\n"
 
     return markdown
+
+def get_model_metrics(model, model_name, X_train, Y_train, X_val, Y_val, X_test, Y_test):
+    # Avaliação dos modelos e adição ao DataFrame
+    print(f"🔍 Avaliando modelo {model_name}...")
+
+    # Previsões
+    Y_pred_train = model.predict(X_train)
+    Y_pred_val = model.predict(X_val)
+    Y_pred_test = model.predict(X_test)
+
+    # Probabilidades para AUC-ROC
+    Y_prob_train = model.predict_proba(X_train)[:, 1]
+    Y_prob_val = model.predict_proba(X_val)[:, 1]
+    Y_prob_test = model.predict_proba(X_test)[:, 1]
+
+    # Curva ROC
+    fpr_train, tpr_train, _ = roc_curve(Y_train, Y_prob_train)
+    fpr_val, tpr_val, _ = roc_curve(Y_val, Y_prob_val)
+    fpr_test, tpr_test, _ = roc_curve(Y_test, Y_prob_test)
+
+    # Matriz de Confusão
+    cm_train = confusion_matrix(Y_train, Y_pred_train)
+    cm_val = confusion_matrix(Y_val, Y_pred_val)
+    cm_test = confusion_matrix(Y_test, Y_pred_test)
+
+    # Salvando resultados no DataFrame
+    df_results = pd.DataFrame([
+        {
+            "Data": "Train",
+            "Accuracy": accuracy_score(Y_train, Y_pred_train),
+            "F1_Score": f1_score(Y_train, Y_pred_train),
+            "Recall": recall_score(Y_train, Y_pred_train),
+            "Precision": precision_score(Y_train, Y_pred_train),
+            "AUC_ROC": roc_auc_score(Y_train, Y_prob_train),
+            "Confusion_Matrix": [cm_train],
+            "FPR": [fpr_train],
+            "TPR": [tpr_train]
+        },
+        {
+            "Data": "Validation",
+            "Accuracy": accuracy_score(Y_val, Y_pred_val),
+            "F1_Score": f1_score(Y_val, Y_pred_val),
+            "Recall": recall_score(Y_val, Y_pred_val),
+            "Precision": precision_score(Y_val, Y_pred_val),
+            "AUC_ROC": roc_auc_score(Y_val, Y_prob_val),
+            "Confusion_Matrix": [cm_val],
+            "FPR": [fpr_val],
+            "TPR": [tpr_val],
+        },
+        {
+            "Data": "Test",
+            "Accuracy": accuracy_score(Y_test, Y_pred_test),
+            "F1_Score": f1_score(Y_test, Y_pred_test),
+            "Recall": recall_score(Y_test, Y_pred_test),
+            "Precision": precision_score(Y_test, Y_pred_test),
+            "AUC_ROC": roc_auc_score(Y_test, Y_prob_test),
+            "Confusion_Matrix": [cm_test],
+            "FPR": [fpr_test],
+            "TPR": [tpr_test]
+        }
+    ])
+
+    return df_results
