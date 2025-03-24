@@ -10,3 +10,4 @@ torch
 xgboost
 sklearn-lvq
 memory_profiler
+lightgbm
