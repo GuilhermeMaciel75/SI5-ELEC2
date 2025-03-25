@@ -1,0 +1,642 @@
+{
+    "0": {
+        "params": {
+            "subsample": 0.6,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0,
+            "num_leaves": 40,
+            "n_estimators": 250,
+            "min_child_samples": 20,
+            "max_depth": 20,
+            "learning_rate": 0.1,
+            "colsample_bytree": 0.9
+        },
+        "score": 0.971351052224966,
+        "model_time": 0.25603270530700684,
+        "accuracy_train": 0.9751549613237027,
+        "accuracy_val": 0.9136983026535979,
+        "accuracy_test": 0.9235181644359465,
+        "f1_score": 0.9057714958775029,
+        "recall": 0.90099589923843,
+        "auc": 0.9200175297564778,
+        "fpr": [
+            0.0,
+            0.060960839725474364,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.90099589923843,
+            1.0
+        ],
+        "model_path": "./models/lgbm/0.pkl"
+    },
+    "1": {
+        "params": {
+            "subsample": 0.7,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0,
+            "num_leaves": 50,
+            "n_estimators": 200,
+            "min_child_samples": 10,
+            "max_depth": 15,
+            "learning_rate": 0.1,
+            "colsample_bytree": 0.9
+        },
+        "score": 0.9717409818512941,
+        "model_time": 0.326174259185791,
+        "accuracy_train": 0.9785359356590339,
+        "accuracy_val": 0.9160889313889553,
+        "accuracy_test": 0.9242351816443595,
+        "f1_score": 0.9064620832103866,
+        "recall": 0.8998242530755711,
+        "auc": 0.9204409921009669,
+        "fpr": [
+            0.0,
+            0.05894226887363747,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8998242530755711,
+            1.0
+        ],
+        "model_path": "./models/lgbm/1.pkl"
+    },
+    "2": {
+        "params": {
+            "subsample": 0.9,
+            "reg_lambda": 0.1,
+            "reg_alpha": 0.05,
+            "num_leaves": 40,
+            "n_estimators": 200,
+            "min_child_samples": 10,
+            "max_depth": 10,
+            "learning_rate": 0.1,
+            "colsample_bytree": 0.9
+        },
+        "score": 0.9689007703819247,
+        "model_time": 0.2424755096435547,
+        "accuracy_train": 0.9637313662209928,
+        "accuracy_val": 0.9093951709299546,
+        "accuracy_test": 0.9173040152963671,
+        "f1_score": 0.8987119437939111,
+        "recall": 0.8992384299941417,
+        "auc": 0.9144960821751088,
+        "fpr": [
+            0.0,
+            0.0702462656439241,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8992384299941417,
+            1.0
+        ],
+        "model_path": "./models/lgbm/2.pkl"
+    },
+    "3": {
+        "params": {
+            "subsample": 1.0,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0,
+            "num_leaves": 60,
+            "n_estimators": 250,
+            "min_child_samples": 50,
+            "max_depth": 20,
+            "learning_rate": 0.05,
+            "colsample_bytree": 0.7
+        },
+        "score": 0.9675166950844375,
+        "model_time": 0.3712124824523926,
+        "accuracy_train": 0.9572255519696737,
+        "accuracy_val": 0.9060482907004542,
+        "accuracy_test": 0.9163479923518164,
+        "f1_score": 0.8974208675263775,
+        "recall": 0.8968951376684241,
+        "auc": 0.91332443601225,
+        "fpr": [
+            0.0,
+            0.0702462656439241,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8968951376684241,
+            1.0
+        ],
+        "model_path": "./models/lgbm/3.pkl"
+    },
+    "4": {
+        "params": {
+            "subsample": 0.9,
+            "reg_lambda": 0.05,
+            "reg_alpha": 0.01,
+            "num_leaves": 60,
+            "n_estimators": 250,
+            "min_child_samples": 20,
+            "max_depth": -1,
+            "learning_rate": 0.05,
+            "colsample_bytree": 0.9
+        },
+        "score": 0.9701401288231655,
+        "model_time": 0.412280797958374,
+        "accuracy_train": 0.9627068285436197,
+        "accuracy_val": 0.9093951709299546,
+        "accuracy_test": 0.9149139579349904,
+        "f1_score": 0.8952324896998234,
+        "recall": 0.8910369068541301,
+        "auc": 0.9112027489458377,
+        "fpr": [
+            0.0,
+            0.06863140896245458,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8910369068541301,
+            1.0
+        ],
+        "model_path": "./models/lgbm/4.pkl"
+    },
+    "5": {
+        "params": {
+            "subsample": 0.8,
+            "reg_lambda": 0.05,
+            "reg_alpha": 0.01,
+            "num_leaves": 40,
+            "n_estimators": 250,
+            "min_child_samples": 30,
+            "max_depth": 15,
+            "learning_rate": 0.1,
+            "colsample_bytree": 0.9
+        },
+        "score": 0.9708942099984949,
+        "model_time": 0.308258056640625,
+        "accuracy_train": 0.9713129450335536,
+        "accuracy_val": 0.9120248625388477,
+        "accuracy_test": 0.9173040152963671,
+        "f1_score": 0.8980553918680023,
+        "recall": 0.8927943760984183,
+        "auc": 0.9134944831642677,
+        "fpr": [
+            0.0,
+            0.06580540976988292,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8927943760984183,
+            1.0
+        ],
+        "model_path": "./models/lgbm/5.pkl"
+    },
+    "6": {
+        "params": {
+            "subsample": 1.0,
+            "reg_lambda": 0.05,
+            "reg_alpha": 0.1,
+            "num_leaves": 50,
+            "n_estimators": 200,
+            "min_child_samples": 10,
+            "max_depth": -1,
+            "learning_rate": 0.05,
+            "colsample_bytree": 0.9
+        },
+        "score": 0.964674881223093,
+        "model_time": 0.2590816020965576,
+        "accuracy_train": 0.9428307976025818,
+        "accuracy_val": 0.8979201530002391,
+        "accuracy_test": 0.9101338432122371,
+        "f1_score": 0.8898007033997656,
+        "recall": 0.8892794376098418,
+        "auc": 0.9068924438755709,
+        "fpr": [
+            0.0,
+            0.07549454985870004,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8892794376098418,
+            1.0
+        ],
+        "model_path": "./models/lgbm/6.pkl"
+    },
+    "7": {
+        "params": {
+            "subsample": 0.6,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0.1,
+            "num_leaves": 70,
+            "n_estimators": 250,
+            "min_child_samples": 20,
+            "max_depth": 15,
+            "learning_rate": 0.1,
+            "colsample_bytree": 0.9
+        },
+        "score": 0.9755711639347815,
+        "model_time": 0.44217777252197266,
+        "accuracy_train": 0.9949285384970032,
+        "accuracy_val": 0.9237389433420989,
+        "accuracy_test": 0.9292543021032504,
+        "f1_score": 0.9127358490566038,
+        "recall": 0.9068541300527241,
+        "auc": 0.9257726443561966,
+        "fpr": [
+            0.0,
+            0.055308841340331046,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9068541300527241,
+            1.0
+        ],
+        "model_path": "./models/lgbm/7.pkl"
+    },
+    "8": {
+        "params": {
+            "subsample": 1.0,
+            "reg_lambda": 0.05,
+            "reg_alpha": 0,
+            "num_leaves": 70,
+            "n_estimators": 250,
+            "min_child_samples": 10,
+            "max_depth": -1,
+            "learning_rate": 0.07,
+            "colsample_bytree": 0.9
+        },
+        "score": 0.9740916089415457,
+        "model_time": 0.37566232681274414,
+        "accuracy_train": 0.9862711951232006,
+        "accuracy_val": 0.91919674874492,
+        "accuracy_test": 0.9263862332695985,
+        "f1_score": 0.9091445427728614,
+        "recall": 0.9027533684827183,
+        "auc": 0.9227129781452751,
+        "fpr": [
+            0.0,
+            0.05732741219216794,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9027533684827183,
+            1.0
+        ],
+        "model_path": "./models/lgbm/8.pkl"
+    },
+    "9": {
+        "params": {
+            "subsample": 0.7,
+            "reg_lambda": 0.05,
+            "reg_alpha": 0.05,
+            "num_leaves": 70,
+            "n_estimators": 150,
+            "min_child_samples": 50,
+            "max_depth": -1,
+            "learning_rate": 0.05,
+            "colsample_bytree": 0.6
+        },
+        "score": 0.9594956560588228,
+        "model_time": 0.2894866466522217,
+        "accuracy_train": 0.9344808155319911,
+        "accuracy_val": 0.8945732727707387,
+        "accuracy_test": 0.8996175908221797,
+        "f1_score": 0.8758131283264341,
+        "recall": 0.8676039835969537,
+        "auc": 0.8946417172728409,
+        "fpr": [
+            0.0,
+            0.0783205490512717,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8676039835969537,
+            1.0
+        ],
+        "model_path": "./models/lgbm/9.pkl"
+    },
+    "10": {
+        "params": {
+            "subsample": 1.0,
+            "reg_lambda": 0.05,
+            "reg_alpha": 0.01,
+            "num_leaves": 70,
+            "n_estimators": 200,
+            "min_child_samples": 20,
+            "max_depth": -1,
+            "learning_rate": 0.1,
+            "colsample_bytree": 0.7
+        },
+        "score": 0.9740601880066192,
+        "model_time": 0.33577799797058105,
+        "accuracy_train": 0.9874494134521797,
+        "accuracy_val": 0.9184795601243126,
+        "accuracy_test": 0.9280592734225621,
+        "f1_score": 0.9112356237098201,
+        "recall": 0.9050966608084359,
+        "auc": 0.9244901955636852,
+        "fpr": [
+            0.0,
+            0.056116269681065804,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9050966608084359,
+            1.0
+        ],
+        "model_path": "./models/lgbm/10.pkl"
+    },
+    "11": {
+        "params": {
+            "subsample": 0.9,
+            "reg_lambda": 0.05,
+            "reg_alpha": 0,
+            "num_leaves": 60,
+            "n_estimators": 250,
+            "min_child_samples": 30,
+            "max_depth": 20,
+            "learning_rate": 0.05,
+            "colsample_bytree": 0.7
+        },
+        "score": 0.9687120698806202,
+        "model_time": 0.3461568355560303,
+        "accuracy_train": 0.9597868961631064,
+        "accuracy_val": 0.9091561080564189,
+        "accuracy_test": 0.9158699808795411,
+        "f1_score": 0.8964096527369041,
+        "recall": 0.8922085530169889,
+        "auc": 0.9121922861976345,
+        "fpr": [
+            0.0,
+            0.06782398062171982,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8922085530169889,
+            1.0
+        ],
+        "model_path": "./models/lgbm/11.pkl"
+    },
+    "12": {
+        "params": {
+            "subsample": 0.8,
+            "reg_lambda": 0.05,
+            "reg_alpha": 0,
+            "num_leaves": 50,
+            "n_estimators": 250,
+            "min_child_samples": 30,
+            "max_depth": -1,
+            "learning_rate": 0.1,
+            "colsample_bytree": 0.8
+        },
+        "score": 0.972159539959932,
+        "model_time": 0.36835765838623047,
+        "accuracy_train": 0.9806362378976486,
+        "accuracy_val": 0.9153717427683481,
+        "accuracy_test": 0.9218451242829828,
+        "f1_score": 0.9039083161915956,
+        "recall": 0.90099589923843,
+        "auc": 0.918604530160192,
+        "fpr": [
+            0.0,
+            0.06378683891804603,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.90099589923843,
+            1.0
+        ],
+        "model_path": "./models/lgbm/12.pkl"
+    },
+    "13": {
+        "params": {
+            "subsample": 1.0,
+            "reg_lambda": 0.05,
+            "reg_alpha": 0.05,
+            "num_leaves": 50,
+            "n_estimators": 250,
+            "min_child_samples": 20,
+            "max_depth": 20,
+            "learning_rate": 0.07,
+            "colsample_bytree": 0.6
+        },
+        "score": 0.9690779580689753,
+        "model_time": 0.35664868354797363,
+        "accuracy_train": 0.9663951641821628,
+        "accuracy_val": 0.9091561080564189,
+        "accuracy_test": 0.9146749521988528,
+        "f1_score": 0.894659191501918,
+        "recall": 0.888107791446983,
+        "auc": 0.910545619582999,
+        "fpr": [
+            0.0,
+            0.06701655228098506,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.888107791446983,
+            1.0
+        ],
+        "model_path": "./models/lgbm/13.pkl"
+    },
+    "14": {
+        "params": {
+            "subsample": 0.7,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0,
+            "num_leaves": 60,
+            "n_estimators": 200,
+            "min_child_samples": 10,
+            "max_depth": 15,
+            "learning_rate": 0.1,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.9730727376823728,
+        "model_time": 0.3398928642272949,
+        "accuracy_train": 0.9860150607038574,
+        "accuracy_val": 0.9199139373655272,
+        "accuracy_test": 0.9244741873804971,
+        "f1_score": 0.9066745422327229,
+        "recall": 0.8992384299941417,
+        "auc": 0.9205517947306194,
+        "fpr": [
+            0.0,
+            0.05813484053290271,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8992384299941417,
+            1.0
+        ],
+        "model_path": "./models/lgbm/14.pkl"
+    },
+    "15": {
+        "params": {
+            "subsample": 0.6,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0.05,
+            "num_leaves": 60,
+            "n_estimators": 250,
+            "min_child_samples": 20,
+            "max_depth": 20,
+            "learning_rate": 0.1,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.9747443541761995,
+        "model_time": 0.436068058013916,
+        "accuracy_train": 0.9921110598842272,
+        "accuracy_val": 0.9230217547214917,
+        "accuracy_test": 0.9259082217973231,
+        "f1_score": 0.9084465445953928,
+        "recall": 0.90099589923843,
+        "auc": 0.9220361006083146,
+        "fpr": [
+            0.0,
+            0.05692369802180056,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.90099589923843,
+            1.0
+        ],
+        "model_path": "./models/lgbm/15.pkl"
+    },
+    "16": {
+        "params": {
+            "subsample": 0.8,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0,
+            "num_leaves": 70,
+            "n_estimators": 200,
+            "min_child_samples": 40,
+            "max_depth": 15,
+            "learning_rate": 0.1,
+            "colsample_bytree": 0.9
+        },
+        "score": 0.9723951493128558,
+        "model_time": 0.3773465156555176,
+        "accuracy_train": 0.9842733466523231,
+        "accuracy_val": 0.91919674874492,
+        "accuracy_test": 0.9261472275334608,
+        "f1_score": 0.9087149187592319,
+        "recall": 0.90099589923843,
+        "auc": 0.9222379576934984,
+        "fpr": [
+            0.0,
+            0.056519983851433184,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.90099589923843,
+            1.0
+        ],
+        "model_path": "./models/lgbm/16.pkl"
+    },
+    "17": {
+        "params": {
+            "subsample": 0.6,
+            "reg_lambda": 0.1,
+            "reg_alpha": 0.1,
+            "num_leaves": 70,
+            "n_estimators": 250,
+            "min_child_samples": 40,
+            "max_depth": 20,
+            "learning_rate": 0.1,
+            "colsample_bytree": 0.9
+        },
+        "score": 0.974713227252088,
+        "model_time": 0.43033599853515625,
+        "accuracy_train": 0.991547564161672,
+        "accuracy_val": 0.9232608175950275,
+        "accuracy_test": 0.9278202676864244,
+        "f1_score": 0.9107565011820331,
+        "recall": 0.9027533684827183,
+        "auc": 0.9239241206563773,
+        "fpr": [
+            0.0,
+            0.054905127169963666,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9027533684827183,
+            1.0
+        ],
+        "model_path": "./models/lgbm/17.pkl"
+    },
+    "18": {
+        "params": {
+            "subsample": 0.7,
+            "reg_lambda": 0.05,
+            "reg_alpha": 0.05,
+            "num_leaves": 70,
+            "n_estimators": 200,
+            "min_child_samples": 10,
+            "max_depth": 15,
+            "learning_rate": 0.1,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.974378915442901,
+        "model_time": 0.3621788024902344,
+        "accuracy_train": 0.9907279340197735,
+        "accuracy_val": 0.9249342577097777,
+        "accuracy_test": 0.9287762906309751,
+        "f1_score": 0.9123013537374927,
+        "recall": 0.9080257762155829,
+        "auc": 0.9255510390968912,
+        "fpr": [
+            0.0,
+            0.05692369802180056,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9080257762155829,
+            1.0
+        ],
+        "model_path": "./models/lgbm/18.pkl"
+    },
+    "19": {
+        "params": {
+            "subsample": 0.8,
+            "reg_lambda": 0.05,
+            "reg_alpha": 0.1,
+            "num_leaves": 70,
+            "n_estimators": 150,
+            "min_child_samples": 10,
+            "max_depth": -1,
+            "learning_rate": 0.1,
+            "colsample_bytree": 0.6
+        },
+        "score": 0.9701424744537921,
+        "model_time": 0.28201794624328613,
+        "accuracy_train": 0.9777163055171354,
+        "accuracy_val": 0.9089170451828831,
+        "accuracy_test": 0.9192160611854685,
+        "f1_score": 0.9002949852507375,
+        "recall": 0.8939660222612771,
+        "auc": 0.9152914487567994,
+        "fpr": [
+            0.0,
+            0.06338312474767864,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8939660222612771,
+            1.0
+        ],
+        "model_path": "./models/lgbm/19.pkl"
+    }
+}

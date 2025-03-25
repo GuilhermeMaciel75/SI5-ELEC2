@@ -1,0 +1,680 @@
+{
+    "0": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 5,
+            "learning_rate_init": 0.01,
+            "learning_rate": "constant",
+            "hidden_layer_sizes": [
+                100,
+                100
+            ],
+            "early_stopping": true,
+            "alpha": 0.0001,
+            "activation": "tanh"
+        },
+        "score": 0.834509875357867,
+        "model_time": 1.6482114791870117,
+        "accuracy_train": 0.758772603862507,
+        "accuracy_val": 0.7523308630169735,
+        "accuracy_test": 0.763623326959847,
+        "f1_score": 0.6923794712286159,
+        "recall": 0.6520210896309314,
+        "auc": 0.7462769961679082,
+        "fpr": [
+            0.0,
+            0.15946709729511505,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6520210896309314,
+            1.0
+        ],
+        "model_path": "./models/mlp/0.pkl"
+    },
+    "1": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 10,
+            "learning_rate_init": 0.01,
+            "learning_rate": "adaptive",
+            "hidden_layer_sizes": [
+                50,
+                50
+            ],
+            "early_stopping": true,
+            "alpha": 0.01,
+            "activation": "relu"
+        },
+        "score": 0.846533262575155,
+        "model_time": 1.5171077251434326,
+        "accuracy_train": 0.7774191895906972,
+        "accuracy_val": 0.7690652641644753,
+        "accuracy_test": 0.7760516252390057,
+        "f1_score": 0.6912685337726524,
+        "recall": 0.6145284124194493,
+        "auc": 0.7509460794434751,
+        "fpr": [
+            0.0,
+            0.112636253532499,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6145284124194493,
+            1.0
+        ],
+        "model_path": "./models/mlp/1.pkl"
+    },
+    "2": {
+        "params": {
+            "solver": "sgd",
+            "n_iter_no_change": 15,
+            "learning_rate_init": 0.1,
+            "learning_rate": "adaptive",
+            "hidden_layer_sizes": [
+                50,
+                50
+            ],
+            "early_stopping": true,
+            "alpha": 0.01,
+            "activation": "tanh"
+        },
+        "score": 0.8413746469528173,
+        "model_time": 11.548522710800171,
+        "accuracy_train": 0.7725014087393064,
+        "accuracy_val": 0.7602199378436528,
+        "accuracy_test": 0.7703154875717018,
+        "f1_score": 0.6916907282643567,
+        "recall": 0.6315172817809022,
+        "auc": 0.748742088609466,
+        "fpr": [
+            0.0,
+            0.13403310456197012,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6315172817809022,
+            1.0
+        ],
+        "model_path": "./models/mlp/2.pkl"
+    },
+    "3": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 15,
+            "learning_rate_init": 0.01,
+            "learning_rate": "adaptive",
+            "hidden_layer_sizes": [
+                50,
+                50
+            ],
+            "early_stopping": true,
+            "alpha": 0.0001,
+            "activation": "tanh"
+        },
+        "score": 0.8542378839066735,
+        "model_time": 3.3082094192504883,
+        "accuracy_train": 0.7868449362225296,
+        "accuracy_val": 0.7762371503705474,
+        "accuracy_test": 0.7836998087954111,
+        "f1_score": 0.7056910569105691,
+        "recall": 0.635618043350908,
+        "auc": 0.7606834665684697,
+        "fpr": [
+            0.0,
+            0.11425111021396851,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.635618043350908,
+            1.0
+        ],
+        "model_path": "./models/mlp/3.pkl"
+    },
+    "4": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 15,
+            "learning_rate_init": 0.1,
+            "learning_rate": "constant",
+            "hidden_layer_sizes": [
+                50,
+                50
+            ],
+            "early_stopping": true,
+            "alpha": 0.0001,
+            "activation": "logistic"
+        },
+        "score": 0.8411903397877287,
+        "model_time": 4.617917060852051,
+        "accuracy_train": 0.7711182828748527,
+        "accuracy_val": 0.7621324408319388,
+        "accuracy_test": 0.7681644359464627,
+        "f1_score": 0.6652864044168392,
+        "recall": 0.5647334504979497,
+        "auc": 0.7365451669122772,
+        "fpr": [
+            0.0,
+            0.09164311667339524,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.5647334504979497,
+            1.0
+        ],
+        "model_path": "./models/mlp/4.pkl"
+    },
+    "5": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 15,
+            "learning_rate_init": 0.001,
+            "learning_rate": "adaptive",
+            "hidden_layer_sizes": [
+                100,
+                100
+            ],
+            "early_stopping": true,
+            "alpha": 0.0001,
+            "activation": "relu"
+        },
+        "score": 0.8448574018734158,
+        "model_time": 3.9686636924743652,
+        "accuracy_train": 0.771374417294196,
+        "accuracy_val": 0.7599808749701171,
+        "accuracy_test": 0.7705544933078394,
+        "f1_score": 0.6921103271327774,
+        "recall": 0.6321031048623316,
+        "auc": 0.7490350001501807,
+        "fpr": [
+            0.0,
+            0.13403310456197012,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6321031048623316,
+            1.0
+        ],
+        "model_path": "./models/mlp/5.pkl"
+    },
+    "6": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 10,
+            "learning_rate_init": 0.01,
+            "learning_rate": "constant",
+            "hidden_layer_sizes": [
+                100,
+                100
+            ],
+            "early_stopping": true,
+            "alpha": 0.0001,
+            "activation": "tanh"
+        },
+        "score": 0.8548195977619069,
+        "model_time": 6.267751455307007,
+        "accuracy_train": 0.7883305158547206,
+        "accuracy_val": 0.7779105904852976,
+        "accuracy_test": 0.7798757170172084,
+        "f1_score": 0.6951340615690169,
+        "recall": 0.6151142355008787,
+        "auc": 0.7542668472619452,
+        "fpr": [
+            0.0,
+            0.1065805409769883,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6151142355008787,
+            1.0
+        ],
+        "model_path": "./models/mlp/6.pkl"
+    },
+    "7": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 10,
+            "learning_rate_init": 0.01,
+            "learning_rate": "adaptive",
+            "hidden_layer_sizes": [
+                50,
+                50
+            ],
+            "early_stopping": true,
+            "alpha": 0.001,
+            "activation": "relu"
+        },
+        "score": 0.8415215688168945,
+        "model_time": 2.3436942100524902,
+        "accuracy_train": 0.7836176425388044,
+        "accuracy_val": 0.7712168300262969,
+        "accuracy_test": 0.7750956022944551,
+        "f1_score": 0.6897461259479064,
+        "recall": 0.6127709431751611,
+        "auc": 0.7498654877361474,
+        "fpr": [
+            0.0,
+            0.11303996770286637,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6127709431751611,
+            1.0
+        ],
+        "model_path": "./models/mlp/7.pkl"
+    },
+    "8": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 15,
+            "learning_rate_init": 0.01,
+            "learning_rate": "adaptive",
+            "hidden_layer_sizes": [
+                50,
+                50
+            ],
+            "early_stopping": true,
+            "alpha": 0.001,
+            "activation": "tanh"
+        },
+        "score": 0.8576861479116378,
+        "model_time": 3.401097059249878,
+        "accuracy_train": 0.7854105834742072,
+        "accuracy_val": 0.775759024623476,
+        "accuracy_test": 0.7860898661567878,
+        "f1_score": 0.7079934747145188,
+        "recall": 0.635618043350908,
+        "auc": 0.7627020374203066,
+        "fpr": [
+            0.0,
+            0.1102139685102947,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.635618043350908,
+            1.0
+        ],
+        "model_path": "./models/mlp/8.pkl"
+    },
+    "9": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 10,
+            "learning_rate_init": 0.01,
+            "learning_rate": "constant",
+            "hidden_layer_sizes": [
+                100,
+                100
+            ],
+            "early_stopping": true,
+            "alpha": 0.01,
+            "activation": "relu"
+        },
+        "score": 0.8374599399288813,
+        "model_time": 1.7069196701049805,
+        "accuracy_train": 0.7591311920495877,
+        "accuracy_val": 0.7501792971551519,
+        "accuracy_test": 0.7641013384321224,
+        "f1_score": 0.6950880444856349,
+        "recall": 0.6590509666080844,
+        "auc": 0.7477733638046478,
+        "fpr": [
+            0.0,
+            0.16350423899878885,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6590509666080844,
+            1.0
+        ],
+        "model_path": "./models/mlp/9.pkl"
+    },
+    "10": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 10,
+            "learning_rate_init": 0.001,
+            "learning_rate": "constant",
+            "hidden_layer_sizes": [
+                100,
+                100
+            ],
+            "early_stopping": true,
+            "alpha": 0.01,
+            "activation": "relu"
+        },
+        "score": 0.8381245237290683,
+        "model_time": 2.923112392425537,
+        "accuracy_train": 0.7689667537523692,
+        "accuracy_val": 0.7580683719818312,
+        "accuracy_test": 0.768642447418738,
+        "f1_score": 0.6801057501652347,
+        "recall": 0.6028119507908611,
+        "auc": 0.7428674206921605,
+        "fpr": [
+            0.0,
+            0.11707710940654018,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6028119507908611,
+            1.0
+        ],
+        "model_path": "./models/mlp/10.pkl"
+    },
+    "11": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 10,
+            "learning_rate_init": 0.01,
+            "learning_rate": "constant",
+            "hidden_layer_sizes": [
+                100,
+                100
+            ],
+            "early_stopping": true,
+            "alpha": 0.001,
+            "activation": "tanh"
+        },
+        "score": 0.8472593591819322,
+        "model_time": 4.958771467208862,
+        "accuracy_train": 0.7805440295066851,
+        "accuracy_val": 0.774802773129333,
+        "accuracy_test": 0.7834608030592735,
+        "f1_score": 0.7132911392405064,
+        "recall": 0.6602226127709432,
+        "auc": 0.7643058966155887,
+        "fpr": [
+            0.0,
+            0.13161081953976583,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6602226127709432,
+            1.0
+        ],
+        "model_path": "./models/mlp/11.pkl"
+    },
+    "12": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 10,
+            "learning_rate_init": 0.01,
+            "learning_rate": "constant",
+            "hidden_layer_sizes": [
+                100,
+                100
+            ],
+            "early_stopping": true,
+            "alpha": 0.001,
+            "activation": "tanh"
+        },
+        "score": 0.8472593591819322,
+        "model_time": 5.158336162567139,
+        "accuracy_train": 0.7805440295066851,
+        "accuracy_val": 0.774802773129333,
+        "accuracy_test": 0.7834608030592735,
+        "f1_score": 0.7132911392405064,
+        "recall": 0.6602226127709432,
+        "auc": 0.7643058966155887,
+        "fpr": [
+            0.0,
+            0.13161081953976583,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6602226127709432,
+            1.0
+        ],
+        "model_path": "./models/mlp/12.pkl"
+    },
+    "13": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 10,
+            "learning_rate_init": 0.001,
+            "learning_rate": "constant",
+            "hidden_layer_sizes": [
+                50,
+                50
+            ],
+            "early_stopping": true,
+            "alpha": 0.01,
+            "activation": "relu"
+        },
+        "score": 0.8347782020409544,
+        "model_time": 3.242567300796509,
+        "accuracy_train": 0.7718354592490139,
+        "accuracy_val": 0.7597418120965814,
+        "accuracy_test": 0.7736615678776291,
+        "f1_score": 0.6932296728215096,
+        "recall": 0.6268306971294669,
+        "auc": 0.7508396521577897,
+        "fpr": [
+            0.0,
+            0.12515139281388776,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6268306971294669,
+            1.0
+        ],
+        "model_path": "./models/mlp/13.pkl"
+    },
+    "14": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 5,
+            "learning_rate_init": 0.001,
+            "learning_rate": "adaptive",
+            "hidden_layer_sizes": [
+                100,
+                100
+            ],
+            "early_stopping": true,
+            "alpha": 0.01,
+            "activation": "relu"
+        },
+        "score": 0.8358184019351735,
+        "model_time": 1.8281142711639404,
+        "accuracy_train": 0.7628707545719994,
+        "accuracy_val": 0.7511355486492948,
+        "accuracy_test": 0.7624282982791587,
+        "f1_score": 0.6828334396936822,
+        "recall": 0.6268306971294669,
+        "auc": 0.7413523691541563,
+        "fpr": [
+            0.0,
+            0.14412595882115461,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6268306971294669,
+            1.0
+        ],
+        "model_path": "./models/mlp/14.pkl"
+    },
+    "15": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 15,
+            "learning_rate_init": 0.001,
+            "learning_rate": "adaptive",
+            "hidden_layer_sizes": [
+                100,
+                100
+            ],
+            "early_stopping": true,
+            "alpha": 0.01,
+            "activation": "relu"
+        },
+        "score": 0.8417151427600038,
+        "model_time": 3.3604466915130615,
+        "accuracy_train": 0.7689667537523692,
+        "accuracy_val": 0.7580683719818312,
+        "accuracy_test": 0.768642447418738,
+        "f1_score": 0.6801057501652347,
+        "recall": 0.6028119507908611,
+        "auc": 0.7428674206921605,
+        "fpr": [
+            0.0,
+            0.11707710940654018,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6028119507908611,
+            1.0
+        ],
+        "model_path": "./models/mlp/15.pkl"
+    },
+    "16": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 10,
+            "learning_rate_init": 0.01,
+            "learning_rate": "constant",
+            "hidden_layer_sizes": [
+                100,
+                100
+            ],
+            "early_stopping": true,
+            "alpha": 0.0001,
+            "activation": "tanh"
+        },
+        "score": 0.8548195977619069,
+        "model_time": 6.310044527053833,
+        "accuracy_train": 0.7883305158547206,
+        "accuracy_val": 0.7779105904852976,
+        "accuracy_test": 0.7798757170172084,
+        "f1_score": 0.6951340615690169,
+        "recall": 0.6151142355008787,
+        "auc": 0.7542668472619452,
+        "fpr": [
+            0.0,
+            0.1065805409769883,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6151142355008787,
+            1.0
+        ],
+        "model_path": "./models/mlp/16.pkl"
+    },
+    "17": {
+        "params": {
+            "solver": "sgd",
+            "n_iter_no_change": 10,
+            "learning_rate_init": 0.1,
+            "learning_rate": "adaptive",
+            "hidden_layer_sizes": [
+                50
+            ],
+            "early_stopping": true,
+            "alpha": 0.001,
+            "activation": "relu"
+        },
+        "score": 0.8344070901094565,
+        "model_time": 3.379981279373169,
+        "accuracy_train": 0.7651759643460888,
+        "accuracy_val": 0.7523308630169735,
+        "accuracy_test": 0.7617112810707457,
+        "f1_score": 0.6873628096582001,
+        "recall": 0.6420620972466315,
+        "auc": 0.7431142137424114,
+        "fpr": [
+            0.0,
+            0.15583366976180865,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.6420620972466315,
+            1.0
+        ],
+        "model_path": "./models/mlp/17.pkl"
+    },
+    "18": {
+        "params": {
+            "solver": "sgd",
+            "n_iter_no_change": 15,
+            "learning_rate_init": 0.1,
+            "learning_rate": "adaptive",
+            "hidden_layer_sizes": [
+                100,
+                100
+            ],
+            "early_stopping": true,
+            "alpha": 0.0001,
+            "activation": "relu"
+        },
+        "score": 0.8412942698674577,
+        "model_time": 17.195014476776123,
+        "accuracy_train": 0.7747553916295272,
+        "accuracy_val": 0.7611761893377958,
+        "accuracy_test": 0.7734225621414914,
+        "f1_score": 0.6823056300268097,
+        "recall": 0.5963678968951377,
+        "auc": 0.7459029633849931,
+        "fpr": [
+            0.0,
+            0.1045619701251514,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.5963678968951377,
+            1.0
+        ],
+        "model_path": "./models/mlp/18.pkl"
+    },
+    "19": {
+        "params": {
+            "solver": "adam",
+            "n_iter_no_change": 15,
+            "learning_rate_init": 0.1,
+            "learning_rate": "constant",
+            "hidden_layer_sizes": [
+                100
+            ],
+            "early_stopping": true,
+            "alpha": 0.0001,
+            "activation": "tanh"
+        },
+        "score": 0.8386343192446077,
+        "model_time": 3.6753182411193848,
+        "accuracy_train": 0.7748066185133958,
+        "accuracy_val": 0.7592636863495099,
+        "accuracy_test": 0.7724665391969407,
+        "f1_score": 0.7214745465184318,
+        "recall": 0.7223198594024605,
+        "auc": 0.7646722429834265,
+        "fpr": [
+            0.0,
+            0.19297537343560758,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7223198594024605,
+            1.0
+        ],
+        "model_path": "./models/mlp/19.pkl"
+    }
+}

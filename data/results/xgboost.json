@@ -1,0 +1,642 @@
+{
+    "0": {
+        "params": {
+            "subsample": 1.0,
+            "reg_lambda": 0.01,
+            "reg_alpha": 1,
+            "n_estimators": 100,
+            "min_child_weight": 3,
+            "max_depth": 10,
+            "learning_rate": 0.1,
+            "gamma": 0,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.9684077990339108,
+        "model_time": 0.23370575904846191,
+        "accuracy_train": 0.9721838020593208,
+        "accuracy_val": 0.9110686110447047,
+        "accuracy_test": 0.9192160611854685,
+        "f1_score": 0.900705052878966,
+        "recall": 0.8980667838312829,
+        "auc": 0.9159288299455164,
+        "fpr": [
+            0.0,
+            0.0662091239402503,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8980667838312829,
+            1.0
+        ],
+        "model_path": "./models/xgboost/0.pkl"
+    },
+    "1": {
+        "params": {
+            "subsample": 0.8,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0.1,
+            "n_estimators": 300,
+            "min_child_weight": 1,
+            "max_depth": 10,
+            "learning_rate": 0.1,
+            "gamma": 0.3,
+            "colsample_bytree": 0.6
+        },
+        "score": 0.9716716089061567,
+        "model_time": 0.5187456607818604,
+        "accuracy_train": 0.9995901849290507,
+        "accuracy_val": 0.91919674874492,
+        "accuracy_test": 0.9192160611854685,
+        "f1_score": 0.9002361275088547,
+        "recall": 0.8933801991798477,
+        "auc": 0.9152003943012682,
+        "fpr": [
+            0.0,
+            0.06297941057731127,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8933801991798477,
+            1.0
+        ],
+        "model_path": "./models/xgboost/1.pkl"
+    },
+    "2": {
+        "params": {
+            "subsample": 0.6,
+            "reg_lambda": 1,
+            "reg_alpha": 0,
+            "n_estimators": 200,
+            "min_child_weight": 1,
+            "max_depth": 10,
+            "learning_rate": 0.1,
+            "gamma": 0.1,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.9710175056581223,
+        "model_time": 0.45565199851989746,
+        "accuracy_train": 0.9956969417550331,
+        "accuracy_val": 0.9187186229978485,
+        "accuracy_test": 0.9220841300191205,
+        "f1_score": 0.9038348082595871,
+        "recall": 0.8974809607498535,
+        "auc": 0.9182600605121896,
+        "fpr": [
+            0.0,
+            0.060960839725474364,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8974809607498535,
+            1.0
+        ],
+        "model_path": "./models/xgboost/2.pkl"
+    },
+    "3": {
+        "params": {
+            "subsample": 0.8,
+            "reg_lambda": 0.01,
+            "reg_alpha": 1,
+            "n_estimators": 400,
+            "min_child_weight": 3,
+            "max_depth": 7,
+            "learning_rate": 0.2,
+            "gamma": 0,
+            "colsample_bytree": 0.8
+        },
+        "score": 0.970762254801102,
+        "model_time": 0.5305862426757812,
+        "accuracy_train": 0.9990266892064956,
+        "accuracy_val": 0.9251733205833134,
+        "accuracy_test": 0.9225621414913958,
+        "f1_score": 0.9040284360189573,
+        "recall": 0.8939660222612771,
+        "auc": 0.9181174479493709,
+        "fpr": [
+            0.0,
+            0.05773112636253532,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8939660222612771,
+            1.0
+        ],
+        "model_path": "./models/xgboost/3.pkl"
+    },
+    "4": {
+        "params": {
+            "subsample": 0.6,
+            "reg_lambda": 0.1,
+            "reg_alpha": 0.1,
+            "n_estimators": 200,
+            "min_child_weight": 1,
+            "max_depth": 10,
+            "learning_rate": 0.2,
+            "gamma": 0,
+            "colsample_bytree": 0.8
+        },
+        "score": 0.9692079598039978,
+        "model_time": 0.3753328323364258,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.9237389433420989,
+        "accuracy_test": 0.9208891013384322,
+        "f1_score": 0.9022156573116691,
+        "recall": 0.8945518453427065,
+        "auc": 0.916795502808616,
+        "fpr": [
+            0.0,
+            0.060960839725474364,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8945518453427065,
+            1.0
+        ],
+        "model_path": "./models/xgboost/4.pkl"
+    },
+    "5": {
+        "params": {
+            "subsample": 0.6,
+            "reg_lambda": 1,
+            "reg_alpha": 0,
+            "n_estimators": 200,
+            "min_child_weight": 1,
+            "max_depth": 10,
+            "learning_rate": 0.1,
+            "gamma": 0.1,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.9710175056581223,
+        "model_time": 0.5541532039642334,
+        "accuracy_train": 0.9956969417550331,
+        "accuracy_val": 0.9187186229978485,
+        "accuracy_test": 0.9220841300191205,
+        "f1_score": 0.9038348082595871,
+        "recall": 0.8974809607498535,
+        "auc": 0.9182600605121896,
+        "fpr": [
+            0.0,
+            0.060960839725474364,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8974809607498535,
+            1.0
+        ],
+        "model_path": "./models/xgboost/5.pkl"
+    },
+    "6": {
+        "params": {
+            "subsample": 1.0,
+            "reg_lambda": 0.1,
+            "reg_alpha": 0.1,
+            "n_estimators": 400,
+            "min_child_weight": 5,
+            "max_depth": 10,
+            "learning_rate": 0.1,
+            "gamma": 0.1,
+            "colsample_bytree": 0.8
+        },
+        "score": 0.9721514364907187,
+        "model_time": 0.5127670764923096,
+        "accuracy_train": 0.9946211771937913,
+        "accuracy_val": 0.917284245756634,
+        "accuracy_test": 0.9232791586998088,
+        "f1_score": 0.9055604589585172,
+        "recall": 0.9015817223198594,
+        "auc": 0.9199067271268251,
+        "fpr": [
+            0.0,
+            0.06176826806620912,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9015817223198594,
+            1.0
+        ],
+        "model_path": "./models/xgboost/6.pkl"
+    },
+    "7": {
+        "params": {
+            "subsample": 1.0,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0.01,
+            "n_estimators": 400,
+            "min_child_weight": 3,
+            "max_depth": 10,
+            "learning_rate": 0.05,
+            "gamma": 0.3,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.9701640932989303,
+        "model_time": 0.5898046493530273,
+        "accuracy_train": 0.9852466574458276,
+        "accuracy_val": 0.9213483146067416,
+        "accuracy_test": 0.9223231357552581,
+        "f1_score": 0.9043273476596997,
+        "recall": 0.8998242530755711,
+        "auc": 0.9188261354194973,
+        "fpr": [
+            0.0,
+            0.0621719822365765,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8998242530755711,
+            1.0
+        ],
+        "model_path": "./models/xgboost/7.pkl"
+    },
+    "8": {
+        "params": {
+            "subsample": 0.8,
+            "reg_lambda": 0,
+            "reg_alpha": 0,
+            "n_estimators": 200,
+            "min_child_weight": 3,
+            "max_depth": 7,
+            "learning_rate": 0.2,
+            "gamma": 0,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.970133854495036,
+        "model_time": 0.2977461814880371,
+        "accuracy_train": 0.987398186568311,
+        "accuracy_val": 0.9139373655271337,
+        "accuracy_test": 0.9199330783938815,
+        "f1_score": 0.9018458833870495,
+        "recall": 0.9015817223198594,
+        "auc": 0.9170807279342534,
+        "fpr": [
+            0.0,
+            0.06742026645135245,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9015817223198594,
+            1.0
+        ],
+        "model_path": "./models/xgboost/8.pkl"
+    },
+    "9": {
+        "params": {
+            "subsample": 0.6,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0,
+            "n_estimators": 200,
+            "min_child_weight": 1,
+            "max_depth": 7,
+            "learning_rate": 0.2,
+            "gamma": 0.2,
+            "colsample_bytree": 0.8
+        },
+        "score": 0.9667214550704513,
+        "model_time": 0.3107273578643799,
+        "accuracy_train": 0.9939040008196302,
+        "accuracy_val": 0.912742051159455,
+        "accuracy_test": 0.9122848948374761,
+        "f1_score": 0.8920905615995296,
+        "recall": 0.8886936145284124,
+        "auc": 0.9086181031866932,
+        "fpr": [
+            0.0,
+            0.07145740815502624,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8886936145284124,
+            1.0
+        ],
+        "model_path": "./models/xgboost/9.pkl"
+    },
+    "10": {
+        "params": {
+            "subsample": 1.0,
+            "reg_lambda": 1,
+            "reg_alpha": 0.1,
+            "n_estimators": 300,
+            "min_child_weight": 1,
+            "max_depth": 10,
+            "learning_rate": 0.05,
+            "gamma": 0.2,
+            "colsample_bytree": 0.6
+        },
+        "score": 0.970969818454404,
+        "model_time": 0.5541706085205078,
+        "accuracy_train": 0.9947748578453972,
+        "accuracy_val": 0.91919674874492,
+        "accuracy_test": 0.9194550669216062,
+        "f1_score": 0.9006192863462106,
+        "recall": 0.8945518453427065,
+        "auc": 0.915584360297514,
+        "fpr": [
+            0.0,
+            0.06338312474767864,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8945518453427065,
+            1.0
+        ],
+        "model_path": "./models/xgboost/10.pkl"
+    },
+    "11": {
+        "params": {
+            "subsample": 0.8,
+            "reg_lambda": 0,
+            "reg_alpha": 1,
+            "n_estimators": 400,
+            "min_child_weight": 1,
+            "max_depth": 10,
+            "learning_rate": 0.2,
+            "gamma": 0.3,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.9719589090421488,
+        "model_time": 0.47890353202819824,
+        "accuracy_train": 0.9984119666000717,
+        "accuracy_val": 0.9266076978245279,
+        "accuracy_test": 0.9261472275334608,
+        "f1_score": 0.9089301503094607,
+        "recall": 0.9033391915641477,
+        "auc": 0.9226021755156224,
+        "fpr": [
+            0.0,
+            0.05813484053290271,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9033391915641477,
+            1.0
+        ],
+        "model_path": "./models/xgboost/11.pkl"
+    },
+    "12": {
+        "params": {
+            "subsample": 1.0,
+            "reg_lambda": 0.01,
+            "reg_alpha": 0,
+            "n_estimators": 400,
+            "min_child_weight": 1,
+            "max_depth": 5,
+            "learning_rate": 0.2,
+            "gamma": 0.1,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.9725312831116788,
+        "model_time": 0.2778589725494385,
+        "accuracy_train": 0.9901132114133497,
+        "accuracy_val": 0.9168061200095625,
+        "accuracy_test": 0.9201720841300192,
+        "f1_score": 0.9017647058823529,
+        "recall": 0.8980667838312829,
+        "auc": 0.916736258286251,
+        "fpr": [
+            0.0,
+            0.06459426725878079,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8980667838312829,
+            1.0
+        ],
+        "model_path": "./models/xgboost/12.pkl"
+    },
+    "13": {
+        "params": {
+            "subsample": 1.0,
+            "reg_lambda": 1,
+            "reg_alpha": 1,
+            "n_estimators": 400,
+            "min_child_weight": 3,
+            "max_depth": 7,
+            "learning_rate": 0.2,
+            "gamma": 0.1,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.9717729812723244,
+        "model_time": 0.2521321773529053,
+        "accuracy_train": 0.9881665898263409,
+        "accuracy_val": 0.9220655032273488,
+        "accuracy_test": 0.9242351816443595,
+        "f1_score": 0.9067921199647163,
+        "recall": 0.9033391915641477,
+        "auc": 0.9209873188341529,
+        "fpr": [
+            0.0,
+            0.06136455389584174,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9033391915641477,
+            1.0
+        ],
+        "model_path": "./models/xgboost/13.pkl"
+    },
+    "14": {
+        "params": {
+            "subsample": 0.8,
+            "reg_lambda": 0,
+            "reg_alpha": 0.1,
+            "n_estimators": 300,
+            "min_child_weight": 3,
+            "max_depth": 10,
+            "learning_rate": 0.1,
+            "gamma": 0.1,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.9729613319044728,
+        "model_time": 0.5818266868591309,
+        "accuracy_train": 0.9981558321807285,
+        "accuracy_val": 0.9297155151804924,
+        "accuracy_test": 0.9285372848948374,
+        "f1_score": 0.9119293078055964,
+        "recall": 0.9068541300527241,
+        "auc": 0.9251670731006455,
+        "fpr": [
+            0.0,
+            0.056519983851433184,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9068541300527241,
+            1.0
+        ],
+        "model_path": "./models/xgboost/14.pkl"
+    },
+    "15": {
+        "params": {
+            "subsample": 0.8,
+            "reg_lambda": 1,
+            "reg_alpha": 0.1,
+            "n_estimators": 400,
+            "min_child_weight": 1,
+            "max_depth": 10,
+            "learning_rate": 0.1,
+            "gamma": 0.3,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.973873590950612,
+        "model_time": 0.6122984886169434,
+        "accuracy_train": 0.9998463193483941,
+        "accuracy_val": 0.9280420750657423,
+        "accuracy_test": 0.9290152963671128,
+        "f1_score": 0.9125184094256259,
+        "recall": 0.9074399531341535,
+        "auc": 0.9256618417265439,
+        "fpr": [
+            0.0,
+            0.056116269681065804,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9074399531341535,
+            1.0
+        ],
+        "model_path": "./models/xgboost/15.pkl"
+    },
+    "16": {
+        "params": {
+            "subsample": 1.0,
+            "reg_lambda": 0,
+            "reg_alpha": 1,
+            "n_estimators": 400,
+            "min_child_weight": 1,
+            "max_depth": 10,
+            "learning_rate": 0.2,
+            "gamma": 0.1,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.9738140635245214,
+        "model_time": 0.340482234954834,
+        "accuracy_train": 0.9977460171097792,
+        "accuracy_val": 0.9263686349509921,
+        "accuracy_test": 0.9273422562141491,
+        "f1_score": 0.910271546635183,
+        "recall": 0.9033391915641477,
+        "auc": 0.9236114609415409,
+        "fpr": [
+            0.0,
+            0.056116269681065804,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9033391915641477,
+            1.0
+        ],
+        "model_path": "./models/xgboost/16.pkl"
+    },
+    "17": {
+        "params": {
+            "subsample": 0.8,
+            "reg_lambda": 0.1,
+            "reg_alpha": 0,
+            "n_estimators": 400,
+            "min_child_weight": 3,
+            "max_depth": 10,
+            "learning_rate": 0.1,
+            "gamma": 0.1,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.973229809617527,
+        "model_time": 0.642909049987793,
+        "accuracy_train": 0.9997950924645254,
+        "accuracy_val": 0.9275639493186708,
+        "accuracy_test": 0.9268642447418738,
+        "f1_score": 0.9097345132743363,
+        "recall": 0.9033391915641477,
+        "auc": 0.9232077467711736,
+        "fpr": [
+            0.0,
+            0.05692369802180056,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.9033391915641477,
+            1.0
+        ],
+        "model_path": "./models/xgboost/17.pkl"
+    },
+    "18": {
+        "params": {
+            "subsample": 0.8,
+            "reg_lambda": 0.01,
+            "reg_alpha": 1,
+            "n_estimators": 400,
+            "min_child_weight": 1,
+            "max_depth": 10,
+            "learning_rate": 0.2,
+            "gamma": 0.3,
+            "colsample_bytree": 0.8
+        },
+        "score": 0.9721463919242808,
+        "model_time": 0.46930837631225586,
+        "accuracy_train": 0.9982582859484658,
+        "accuracy_val": 0.9187186229978485,
+        "accuracy_test": 0.9242351816443595,
+        "f1_score": 0.906572354848217,
+        "recall": 0.90099589923843,
+        "auc": 0.9206231010120288,
+        "fpr": [
+            0.0,
+            0.059749697214372226,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.90099589923843,
+            1.0
+        ],
+        "model_path": "./models/xgboost/18.pkl"
+    },
+    "19": {
+        "params": {
+            "subsample": 0.6,
+            "reg_lambda": 0.1,
+            "reg_alpha": 0.01,
+            "n_estimators": 200,
+            "min_child_weight": 1,
+            "max_depth": 10,
+            "learning_rate": 0.1,
+            "gamma": 0.3,
+            "colsample_bytree": 1.0
+        },
+        "score": 0.9712161722571476,
+        "model_time": 0.5078580379486084,
+        "accuracy_train": 0.998514420367809,
+        "accuracy_val": 0.9213483146067416,
+        "accuracy_test": 0.9218451242829828,
+        "f1_score": 0.9036251105216623,
+        "recall": 0.8980667838312829,
+        "auc": 0.918149257882537,
+        "fpr": [
+            0.0,
+            0.06176826806620912,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8980667838312829,
+            1.0
+        ],
+        "model_path": "./models/xgboost/19.pkl"
+    }
+}

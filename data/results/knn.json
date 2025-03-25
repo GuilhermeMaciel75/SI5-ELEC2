@@ -1,0 +1,562 @@
+{
+    "0": {
+        "params": {
+            "weights": "distance",
+            "p": 2,
+            "n_neighbors": 10,
+            "metric": "manhattan",
+            "algorithm": "brute"
+        },
+        "score": 0.8884660009899321,
+        "model_time": 0.0020058155059814453,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8166387759980875,
+        "accuracy_test": 0.8178776290630975,
+        "f1_score": 0.7697885196374622,
+        "recall": 0.7463386057410663,
+        "auc": 0.8067583218450993,
+        "fpr": [
+            0.0,
+            0.132821962050868,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7463386057410663,
+            1.0
+        ],
+        "model_path": "./models/knn/0.pkl"
+    },
+    "1": {
+        "params": {
+            "weights": "distance",
+            "p": 2,
+            "n_neighbors": 15,
+            "metric": "manhattan",
+            "algorithm": "auto"
+        },
+        "score": 0.8839892830676692,
+        "model_time": 0.021785736083984375,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8111403299067654,
+        "accuracy_test": 0.8078393881453155,
+        "f1_score": 0.7550274223034735,
+        "recall": 0.7258347978910369,
+        "auc": 0.7950934183237987,
+        "fpr": [
+            0.0,
+            0.13564796124343964,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7258347978910369,
+            1.0
+        ],
+        "model_path": "./models/knn/1.pkl"
+    },
+    "2": {
+        "params": {
+            "weights": "distance",
+            "p": 2,
+            "n_neighbors": 7,
+            "metric": "manhattan",
+            "algorithm": "brute"
+        },
+        "score": 0.8896577334651429,
+        "model_time": 0.0009999275207519531,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8140090843891944,
+        "accuracy_test": 0.8162045889101338,
+        "f1_score": 0.7696915244085055,
+        "recall": 0.7527826596367897,
+        "auc": 0.8063469212596545,
+        "fpr": [
+            0.0,
+            0.14008881711748083,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7527826596367897,
+            1.0
+        ],
+        "model_path": "./models/knn/2.pkl"
+    },
+    "3": {
+        "params": {
+            "weights": "distance",
+            "p": 3,
+            "n_neighbors": 10,
+            "metric": "manhattan",
+            "algorithm": "ball_tree"
+        },
+        "score": 0.8884660009899321,
+        "model_time": 0.013000965118408203,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8166387759980875,
+        "accuracy_test": 0.8178776290630975,
+        "f1_score": 0.7697885196374622,
+        "recall": 0.7463386057410663,
+        "auc": 0.8067583218450993,
+        "fpr": [
+            0.0,
+            0.132821962050868,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7463386057410663,
+            1.0
+        ],
+        "model_path": "./models/knn/3.pkl"
+    },
+    "4": {
+        "params": {
+            "weights": "distance",
+            "p": 1,
+            "n_neighbors": 10,
+            "metric": "manhattan",
+            "algorithm": "ball_tree"
+        },
+        "score": 0.8884660009899321,
+        "model_time": 0.012000799179077148,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8166387759980875,
+        "accuracy_test": 0.8178776290630975,
+        "f1_score": 0.7697885196374622,
+        "recall": 0.7463386057410663,
+        "auc": 0.8067583218450993,
+        "fpr": [
+            0.0,
+            0.132821962050868,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7463386057410663,
+            1.0
+        ],
+        "model_path": "./models/knn/4.pkl"
+    },
+    "5": {
+        "params": {
+            "weights": "distance",
+            "p": 2,
+            "n_neighbors": 5,
+            "metric": "manhattan",
+            "algorithm": "ball_tree"
+        },
+        "score": 0.8876455955495066,
+        "model_time": 0.012997865676879883,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8144872101362658,
+        "accuracy_test": 0.8228967495219885,
+        "f1_score": 0.779398630544805,
+        "recall": 0.7668424135910955,
+        "auc": 0.8141842265775421,
+        "fpr": [
+            0.0,
+            0.13847396043601132,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7668424135910955,
+            1.0
+        ],
+        "model_path": "./models/knn/5.pkl"
+    },
+    "6": {
+        "params": {
+            "weights": "distance",
+            "p": 3,
+            "n_neighbors": 10,
+            "metric": "manhattan",
+            "algorithm": "kd_tree"
+        },
+        "score": 0.8884660009899321,
+        "model_time": 0.016999483108520508,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8166387759980875,
+        "accuracy_test": 0.8178776290630975,
+        "f1_score": 0.7697885196374622,
+        "recall": 0.7463386057410663,
+        "auc": 0.8067583218450993,
+        "fpr": [
+            0.0,
+            0.132821962050868,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7463386057410663,
+            1.0
+        ],
+        "model_path": "./models/knn/6.pkl"
+    },
+    "7": {
+        "params": {
+            "weights": "distance",
+            "p": 1,
+            "n_neighbors": 10,
+            "metric": "manhattan",
+            "algorithm": "ball_tree"
+        },
+        "score": 0.8884660009899321,
+        "model_time": 0.02099752426147461,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8166387759980875,
+        "accuracy_test": 0.8178776290630975,
+        "f1_score": 0.7697885196374622,
+        "recall": 0.7463386057410663,
+        "auc": 0.8067583218450993,
+        "fpr": [
+            0.0,
+            0.132821962050868,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7463386057410663,
+            1.0
+        ],
+        "model_path": "./models/knn/7.pkl"
+    },
+    "8": {
+        "params": {
+            "weights": "distance",
+            "p": 2,
+            "n_neighbors": 10,
+            "metric": "manhattan",
+            "algorithm": "auto"
+        },
+        "score": 0.8884660009899321,
+        "model_time": 0.016997814178466797,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8166387759980875,
+        "accuracy_test": 0.8178776290630975,
+        "f1_score": 0.7697885196374622,
+        "recall": 0.7463386057410663,
+        "auc": 0.8067583218450993,
+        "fpr": [
+            0.0,
+            0.132821962050868,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7463386057410663,
+            1.0
+        ],
+        "model_path": "./models/knn/8.pkl"
+    },
+    "9": {
+        "params": {
+            "weights": "distance",
+            "p": 1,
+            "n_neighbors": 7,
+            "metric": "manhattan",
+            "algorithm": "ball_tree"
+        },
+        "score": 0.8896577334651429,
+        "model_time": 0.012995243072509766,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8140090843891944,
+        "accuracy_test": 0.8162045889101338,
+        "f1_score": 0.7696915244085055,
+        "recall": 0.7527826596367897,
+        "auc": 0.8063469212596545,
+        "fpr": [
+            0.0,
+            0.14008881711748083,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7527826596367897,
+            1.0
+        ],
+        "model_path": "./models/knn/9.pkl"
+    },
+    "10": {
+        "params": {
+            "weights": "distance",
+            "p": 1,
+            "n_neighbors": 15,
+            "metric": "manhattan",
+            "algorithm": "kd_tree"
+        },
+        "score": 0.8839892830676692,
+        "model_time": 0.016505718231201172,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8111403299067654,
+        "accuracy_test": 0.8078393881453155,
+        "f1_score": 0.7550274223034735,
+        "recall": 0.7258347978910369,
+        "auc": 0.7950934183237987,
+        "fpr": [
+            0.0,
+            0.13564796124343964,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7258347978910369,
+            1.0
+        ],
+        "model_path": "./models/knn/10.pkl"
+    },
+    "11": {
+        "params": {
+            "weights": "distance",
+            "p": 1,
+            "n_neighbors": 10,
+            "metric": "minkowski",
+            "algorithm": "brute"
+        },
+        "score": 0.8884660009899321,
+        "model_time": 0.0009982585906982422,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8166387759980875,
+        "accuracy_test": 0.8178776290630975,
+        "f1_score": 0.7697885196374622,
+        "recall": 0.7463386057410663,
+        "auc": 0.8067583218450993,
+        "fpr": [
+            0.0,
+            0.132821962050868,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7463386057410663,
+            1.0
+        ],
+        "model_path": "./models/knn/11.pkl"
+    },
+    "12": {
+        "params": {
+            "weights": "distance",
+            "p": 2,
+            "n_neighbors": 7,
+            "metric": "manhattan",
+            "algorithm": "ball_tree"
+        },
+        "score": 0.8896577334651429,
+        "model_time": 0.012003421783447266,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8140090843891944,
+        "accuracy_test": 0.8162045889101338,
+        "f1_score": 0.7696915244085055,
+        "recall": 0.7527826596367897,
+        "auc": 0.8063469212596545,
+        "fpr": [
+            0.0,
+            0.14008881711748083,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7527826596367897,
+            1.0
+        ],
+        "model_path": "./models/knn/12.pkl"
+    },
+    "13": {
+        "params": {
+            "weights": "distance",
+            "p": 3,
+            "n_neighbors": 7,
+            "metric": "manhattan",
+            "algorithm": "ball_tree"
+        },
+        "score": 0.8896577334651429,
+        "model_time": 0.013511180877685547,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8140090843891944,
+        "accuracy_test": 0.8162045889101338,
+        "f1_score": 0.7696915244085055,
+        "recall": 0.7527826596367897,
+        "auc": 0.8063469212596545,
+        "fpr": [
+            0.0,
+            0.14008881711748083,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7527826596367897,
+            1.0
+        ],
+        "model_path": "./models/knn/13.pkl"
+    },
+    "14": {
+        "params": {
+            "weights": "distance",
+            "p": 1,
+            "n_neighbors": 10,
+            "metric": "manhattan",
+            "algorithm": "brute"
+        },
+        "score": 0.8884660009899321,
+        "model_time": 0.002006053924560547,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8166387759980875,
+        "accuracy_test": 0.8178776290630975,
+        "f1_score": 0.7697885196374622,
+        "recall": 0.7463386057410663,
+        "auc": 0.8067583218450993,
+        "fpr": [
+            0.0,
+            0.132821962050868,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7463386057410663,
+            1.0
+        ],
+        "model_path": "./models/knn/14.pkl"
+    },
+    "15": {
+        "params": {
+            "weights": "distance",
+            "p": 3,
+            "n_neighbors": 5,
+            "metric": "manhattan",
+            "algorithm": "kd_tree"
+        },
+        "score": 0.8876455955495066,
+        "model_time": 0.01914238929748535,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8144872101362658,
+        "accuracy_test": 0.8228967495219885,
+        "f1_score": 0.779398630544805,
+        "recall": 0.7668424135910955,
+        "auc": 0.8141842265775421,
+        "fpr": [
+            0.0,
+            0.13847396043601132,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7668424135910955,
+            1.0
+        ],
+        "model_path": "./models/knn/15.pkl"
+    },
+    "16": {
+        "params": {
+            "weights": "distance",
+            "p": 2,
+            "n_neighbors": 7,
+            "metric": "manhattan",
+            "algorithm": "auto"
+        },
+        "score": 0.8896577334651429,
+        "model_time": 0.018292903900146484,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8140090843891944,
+        "accuracy_test": 0.8162045889101338,
+        "f1_score": 0.7696915244085055,
+        "recall": 0.7527826596367897,
+        "auc": 0.8063469212596545,
+        "fpr": [
+            0.0,
+            0.14008881711748083,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7527826596367897,
+            1.0
+        ],
+        "model_path": "./models/knn/16.pkl"
+    },
+    "17": {
+        "params": {
+            "weights": "distance",
+            "p": 1,
+            "n_neighbors": 10,
+            "metric": "manhattan",
+            "algorithm": "auto"
+        },
+        "score": 0.8884660009899321,
+        "model_time": 0.017178058624267578,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8166387759980875,
+        "accuracy_test": 0.8178776290630975,
+        "f1_score": 0.7697885196374622,
+        "recall": 0.7463386057410663,
+        "auc": 0.8067583218450993,
+        "fpr": [
+            0.0,
+            0.132821962050868,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7463386057410663,
+            1.0
+        ],
+        "model_path": "./models/knn/17.pkl"
+    },
+    "18": {
+        "params": {
+            "weights": "distance",
+            "p": 1,
+            "n_neighbors": 15,
+            "metric": "minkowski",
+            "algorithm": "kd_tree"
+        },
+        "score": 0.8839892830676692,
+        "model_time": 0.024931669235229492,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8111403299067654,
+        "accuracy_test": 0.8078393881453155,
+        "f1_score": 0.7550274223034735,
+        "recall": 0.7258347978910369,
+        "auc": 0.7950934183237987,
+        "fpr": [
+            0.0,
+            0.13564796124343964,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7258347978910369,
+            1.0
+        ],
+        "model_path": "./models/knn/18.pkl"
+    },
+    "19": {
+        "params": {
+            "weights": "distance",
+            "p": 3,
+            "n_neighbors": 10,
+            "metric": "manhattan",
+            "algorithm": "kd_tree"
+        },
+        "score": 0.8884660009899321,
+        "model_time": 0.03441119194030762,
+        "accuracy_train": 1.0,
+        "accuracy_val": 0.8166387759980875,
+        "accuracy_test": 0.8178776290630975,
+        "f1_score": 0.7697885196374622,
+        "recall": 0.7463386057410663,
+        "auc": 0.8067583218450993,
+        "fpr": [
+            0.0,
+            0.132821962050868,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.7463386057410663,
+            1.0
+        ],
+        "model_path": "./models/knn/19.pkl"
+    }
+}

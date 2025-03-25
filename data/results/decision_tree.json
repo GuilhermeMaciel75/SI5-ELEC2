@@ -1,0 +1,522 @@
+{
+    "0": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 3,
+            "max_depth": 100
+        },
+        "score": 0.9157074476527406,
+        "model_time": 0.10484504699707031,
+        "accuracy_train": 0.8951897956047333,
+        "accuracy_val": 0.8422185034664117,
+        "accuracy_test": 0.8527724665391969,
+        "f1_score": 0.8181818181818182,
+        "recall": 0.81195079086116,
+        "auc": 0.8464275553013916,
+        "fpr": [
+            0.0,
+            0.11909568025837707,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.81195079086116,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/0.pkl"
+    },
+    "1": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 7,
+            "max_depth": 50
+        },
+        "score": 0.9169392935224916,
+        "model_time": 0.10745620727539062,
+        "accuracy_train": 0.8919112750371395,
+        "accuracy_val": 0.8448481950753048,
+        "accuracy_test": 0.8561185468451242,
+        "f1_score": 0.8228369629193644,
+        "recall": 0.8189806678383128,
+        "auc": 0.8503462079603353,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8189806678383128,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/1.pkl"
+    },
+    "2": {
+        "params": {
+            "min_samples_split": 3,
+            "min_samples_leaf": 20,
+            "max_depth": 50
+        },
+        "score": 0.9142560777298936,
+        "model_time": 0.09959530830383301,
+        "accuracy_train": 0.8848419650632652,
+        "accuracy_val": 0.8386325603633755,
+        "accuracy_test": 0.8601816443594646,
+        "f1_score": 0.8272807794508414,
+        "recall": 0.820738137082601,
+        "auc": 0.854050941775051,
+        "fpr": [
+            0.0,
+            0.112636253532499,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.820738137082601,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/2.pkl"
+    },
+    "3": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 7,
+            "max_depth": 50
+        },
+        "score": 0.9169392935224916,
+        "model_time": 0.11626386642456055,
+        "accuracy_train": 0.8919112750371395,
+        "accuracy_val": 0.8448481950753048,
+        "accuracy_test": 0.8561185468451242,
+        "f1_score": 0.8228369629193644,
+        "recall": 0.8189806678383128,
+        "auc": 0.8503462079603353,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8189806678383128,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/3.pkl"
+    },
+    "4": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 3,
+            "max_depth": 50
+        },
+        "score": 0.9157074476527406,
+        "model_time": 0.11062860488891602,
+        "accuracy_train": 0.8951897956047333,
+        "accuracy_val": 0.8422185034664117,
+        "accuracy_test": 0.8527724665391969,
+        "f1_score": 0.8181818181818182,
+        "recall": 0.81195079086116,
+        "auc": 0.8464275553013916,
+        "fpr": [
+            0.0,
+            0.11909568025837707,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.81195079086116,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/4.pkl"
+    },
+    "5": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 5,
+            "max_depth": 100
+        },
+        "score": 0.9167313227158342,
+        "model_time": 0.11124944686889648,
+        "accuracy_train": 0.8932944009015932,
+        "accuracy_val": 0.8441310064546976,
+        "accuracy_test": 0.8549235181644359,
+        "f1_score": 0.8211022693781315,
+        "recall": 0.8160515524311658,
+        "auc": 0.8488816502567619,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8160515524311658,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/5.pkl"
+    },
+    "6": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 2,
+            "max_depth": 100
+        },
+        "score": 0.9144606142911522,
+        "model_time": 0.11664128303527832,
+        "accuracy_train": 0.8959069719788946,
+        "accuracy_val": 0.8412622519722687,
+        "accuracy_test": 0.8513384321223709,
+        "f1_score": 0.816193853427896,
+        "recall": 0.8090216754540129,
+        "auc": 0.8447611405126343,
+        "fpr": [
+            0.0,
+            0.11949939442874445,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8090216754540129,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/6.pkl"
+    },
+    "7": {
+        "params": {
+            "min_samples_split": 2,
+            "min_samples_leaf": 20,
+            "max_depth": 50
+        },
+        "score": 0.9142560777298936,
+        "model_time": 0.10668802261352539,
+        "accuracy_train": 0.8848419650632652,
+        "accuracy_val": 0.8386325603633755,
+        "accuracy_test": 0.8601816443594646,
+        "f1_score": 0.8272807794508414,
+        "recall": 0.820738137082601,
+        "auc": 0.854050941775051,
+        "fpr": [
+            0.0,
+            0.112636253532499,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.820738137082601,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/7.pkl"
+    },
+    "8": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 7,
+            "max_depth": 50
+        },
+        "score": 0.9169392935224916,
+        "model_time": 0.1053457260131836,
+        "accuracy_train": 0.8919112750371395,
+        "accuracy_val": 0.8448481950753048,
+        "accuracy_test": 0.8561185468451242,
+        "f1_score": 0.8228369629193644,
+        "recall": 0.8189806678383128,
+        "auc": 0.8503462079603353,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8189806678383128,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/8.pkl"
+    },
+    "9": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 7,
+            "max_depth": 100
+        },
+        "score": 0.9169392935224916,
+        "model_time": 0.11674165725708008,
+        "accuracy_train": 0.8919112750371395,
+        "accuracy_val": 0.8448481950753048,
+        "accuracy_test": 0.8561185468451242,
+        "f1_score": 0.8228369629193644,
+        "recall": 0.8189806678383128,
+        "auc": 0.8503462079603353,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8189806678383128,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/9.pkl"
+    },
+    "10": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 2,
+            "max_depth": 50
+        },
+        "score": 0.9144606142911522,
+        "model_time": 0.13542556762695312,
+        "accuracy_train": 0.8959069719788946,
+        "accuracy_val": 0.8412622519722687,
+        "accuracy_test": 0.8513384321223709,
+        "f1_score": 0.816193853427896,
+        "recall": 0.8090216754540129,
+        "auc": 0.8447611405126343,
+        "fpr": [
+            0.0,
+            0.11949939442874445,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8090216754540129,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/10.pkl"
+    },
+    "11": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 7,
+            "max_depth": 50
+        },
+        "score": 0.9169392935224916,
+        "model_time": 0.1058816909790039,
+        "accuracy_train": 0.8919112750371395,
+        "accuracy_val": 0.8448481950753048,
+        "accuracy_test": 0.8561185468451242,
+        "f1_score": 0.8228369629193644,
+        "recall": 0.8189806678383128,
+        "auc": 0.8503462079603353,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8189806678383128,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/11.pkl"
+    },
+    "12": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 5,
+            "max_depth": 100
+        },
+        "score": 0.9167313227158342,
+        "model_time": 0.10818290710449219,
+        "accuracy_train": 0.8932944009015932,
+        "accuracy_val": 0.8441310064546976,
+        "accuracy_test": 0.8549235181644359,
+        "f1_score": 0.8211022693781315,
+        "recall": 0.8160515524311658,
+        "auc": 0.8488816502567619,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8160515524311658,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/12.pkl"
+    },
+    "13": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 7,
+            "max_depth": 100
+        },
+        "score": 0.9169392935224916,
+        "model_time": 0.1089012622833252,
+        "accuracy_train": 0.8919112750371395,
+        "accuracy_val": 0.8448481950753048,
+        "accuracy_test": 0.8561185468451242,
+        "f1_score": 0.8228369629193644,
+        "recall": 0.8189806678383128,
+        "auc": 0.8503462079603353,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8189806678383128,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/13.pkl"
+    },
+    "14": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 7,
+            "max_depth": 50
+        },
+        "score": 0.9169392935224916,
+        "model_time": 0.10910296440124512,
+        "accuracy_train": 0.8919112750371395,
+        "accuracy_val": 0.8448481950753048,
+        "accuracy_test": 0.8561185468451242,
+        "f1_score": 0.8228369629193644,
+        "recall": 0.8189806678383128,
+        "auc": 0.8503462079603353,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8189806678383128,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/14.pkl"
+    },
+    "15": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 5,
+            "max_depth": 50
+        },
+        "score": 0.9167313227158342,
+        "model_time": 0.10916781425476074,
+        "accuracy_train": 0.8932944009015932,
+        "accuracy_val": 0.8441310064546976,
+        "accuracy_test": 0.8549235181644359,
+        "f1_score": 0.8211022693781315,
+        "recall": 0.8160515524311658,
+        "auc": 0.8488816502567619,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8160515524311658,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/15.pkl"
+    },
+    "16": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 7,
+            "max_depth": 100
+        },
+        "score": 0.9169392935224916,
+        "model_time": 0.11268901824951172,
+        "accuracy_train": 0.8919112750371395,
+        "accuracy_val": 0.8448481950753048,
+        "accuracy_test": 0.8561185468451242,
+        "f1_score": 0.8228369629193644,
+        "recall": 0.8189806678383128,
+        "auc": 0.8503462079603353,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8189806678383128,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/16.pkl"
+    },
+    "17": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 3,
+            "max_depth": 50
+        },
+        "score": 0.9157074476527406,
+        "model_time": 0.1134650707244873,
+        "accuracy_train": 0.8951897956047333,
+        "accuracy_val": 0.8422185034664117,
+        "accuracy_test": 0.8527724665391969,
+        "f1_score": 0.8181818181818182,
+        "recall": 0.81195079086116,
+        "auc": 0.8464275553013916,
+        "fpr": [
+            0.0,
+            0.11909568025837707,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.81195079086116,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/17.pkl"
+    },
+    "18": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 5,
+            "max_depth": 100
+        },
+        "score": 0.9167313227158342,
+        "model_time": 0.11409330368041992,
+        "accuracy_train": 0.8932944009015932,
+        "accuracy_val": 0.8441310064546976,
+        "accuracy_test": 0.8549235181644359,
+        "f1_score": 0.8211022693781315,
+        "recall": 0.8160515524311658,
+        "auc": 0.8488816502567619,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8160515524311658,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/18.pkl"
+    },
+    "19": {
+        "params": {
+            "min_samples_split": 50,
+            "min_samples_leaf": 7,
+            "max_depth": 100
+        },
+        "score": 0.9169392935224916,
+        "model_time": 0.10767436027526855,
+        "accuracy_train": 0.8919112750371395,
+        "accuracy_val": 0.8448481950753048,
+        "accuracy_test": 0.8561185468451242,
+        "f1_score": 0.8228369629193644,
+        "recall": 0.8189806678383128,
+        "auc": 0.8503462079603353,
+        "fpr": [
+            0.0,
+            0.1182882519176423,
+            1.0
+        ],
+        "tpr": [
+            0.0,
+            0.8189806678383128,
+            1.0
+        ],
+        "model_path": "./models/decision_tree/19.pkl"
+    }
+}
